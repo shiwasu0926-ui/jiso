@@ -10,72 +10,108 @@
 <style>
 body {
   margin: 0;
-  font-family: sans-serif;
+  font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
   background: #f0f0f0;
+  color: #222;
 }
 
 .container {
   max-width: 900px;
   margin: auto;
   background: white;
-  padding: 20px;
+  padding: 30px;
+}
+
+h1 {
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 8px;
+}
+
+h2 {
+  margin: 10px 0 15px;
+  font-weight: normal;
+  color: #555;
+}
+
+p {
+  line-height: 1.8;
+  margin-bottom: 14px;
+}
+
+/* 画像並べ */
+.gallery {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.gallery img {
+  width: 250px;
+  border-radius: 10px;
+}
+
+/* プロフィール */
+.profile {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 10px 10px;
+}
+
+.profile p {
+  margin: 0;
 }
 
 .box {
-  border: 1px solid #ccc;
-  padding: 15px;
-  margin-top: 20px;
+  border: 1px solid #e5e5e5;
+  padding: 20px;
+  margin-top: 30px;
+  background: #fafafa;
+  border-radius: 8px;
 }
 
-
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 10px;
+.box p {
+  margin-bottom: 18px;
 }
 
-.face {
-  width: 180px;
-  border-radius: 10px;
-  margin-left: 0px;
+a {
+  color: blue;
 }
 </style>
 </head>
 
 <body>
 <div class="container">
+
   <a href="index.html">トップ</a> ＞
-   <a href="work.html">創作一覧</a> ＞
+  <a href="work.html">創作一覧</a> ＞
   <a href="world1.html">エンドロールは笑顔とともに</a>
 
-  <div class="header">
+  <h1>クライ・ルジェント</h1>
 
-    <div>
-      <h1>クライ・ルジェント</h1>
-
-       <img src="Syou.jpg" class="face">
-      
-      <h2>「クライはね。ショーくんのことがだーいすきなんだよ！」</h2>
-
-      <p>
-      今は亡きショーの想い人。現在は幽霊となり彼のことを見守っている。
-      </p>
-    </div>
-
+  <div class="gallery">
+    <img src="Syou.jpg">
   </div>
 
+  <h2>「クライはね。ショーくんのことがだーいすきなんだよ！」</h2>
+
   <div class="box">
-    <p>性別：女　　　　　　　享年：17</p>
-    <p>身長：148.1cm 　 　　体重：42.2kg</p>
-    <p>趣味：お花摘み 　　　 誕生日：4月11日</p>
+    <div class="profile">
+      <p>性別：女</p>
+      <p>享年：17</p>
+      <p>身長：148.1cm</p>
+      <p>体重：42.2kg</p>
+      <p>趣味：お花摘み</p>
+      <p>誕生日：4月11日</p>
+    </div>
+
     <p>職業：<s>　　　</s></p>
     <p>好きなもの：カップケーキ、ショーくん</p>
     <p>嫌いなもの：硬いパン、誰かの悲しそうな顔</p>
     <p>得意なマジック：<s>　　　</s></p>
   </div>
 
-  <h2>関係キャラクター</h2>
+  <h2 style="margin-top:50px;">関係キャラクター</h2>
 
   <div class="box">
 
