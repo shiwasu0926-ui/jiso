@@ -21,51 +21,77 @@ body {
   padding: 20px;
 }
 
-  .box {
+.box {
   border: 1px solid #ccc;
   padding: 15px;
   margin-top: 20px;
 }
 
+/* ←これ追加（画像用） */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.face {
+  width: 180px;
+  border-radius: 10px;
+  margin-left: 0px;
+}
 </style>
 </head>
 
 <body>
 <div class="container">
   <a href="index.html">トップ</a> ＞
+   <a href="work.html">創作一覧</a> ＞
   <a href="world1.html">エンドロールは笑顔とともに</a>
 
- <p> <h1>クライ・ルジェント</h1></p>
-  <h2>「クライはね。ショーくんのことがだーいすきなんだよ！」</h2>
+  <div class="header">
 
-<p>
-今は亡きショーの想い人。現在は幽霊となり彼のことを見守っている。<br>
-</p>
-  
-<div class="box">
-<p>性別：女　　　　　　　享年：17</p>
-<p>身長：148.1cm 　 　　体重：42.2kg</p>
-<p>趣味：お花摘み 　　　 誕生日：4月11日</p><br>
-<p>職業：<s>　　　</s></p>
-<p>好きなもの：カップケーキ、ショーくん</p>
-<p>嫌いなもの：硬いパン、誰かの悲しそうな顔</p>
-<p>得意なマジック：<s>　　　</s></p>
-</div><br>
+    <div>
+      <h1>クライ・ルジェント</h1>
+      <h2>「クライはね。ショーくんのことがだーいすきなんだよ！」</h2>
+
+      <p>
+      今は亡きショーの想い人。現在は幽霊となり彼のことを見守っている。
+      </p>
+    </div>
+
+    <img src="syou.jpg" class="face">
+
+  </div>
+
+  <div class="box">
+    <p>性別：女　　　　　　　享年：17</p>
+    <p>身長：148.1cm 　 　　体重：42.2kg</p>
+    <p>趣味：お花摘み 　　　 誕生日：4月11日</p>
+    <p>職業：<s>　　　</s></p>
+    <p>好きなもの：カップケーキ、ショーくん</p>
+    <p>嫌いなもの：硬いパン、誰かの悲しそうな顔</p>
+    <p>得意なマジック：<s>　　　</s></p>
+  </div>
+
   <h2>関係キャラクター</h2>
 
-<div class="box">
+  <div class="box">
 
-  <p>
-    <a href="char1.html"><strong>ショー</strong></a><br>
-  想い人。<br>
-    <em>「ショーくんはマジックが上手なの。いつもクライを笑顔にしてくれるんだ✨」</em>
-  </p>
+    <p>
+      <a href="char1.html"><strong>ショー</strong></a><br>
+      想い人。<br>
+      <em>「ショーくんはマジックが上手なの。いつもクライを笑顔にしてくれるんだ✨」</em>
+    </p>
 
-  <p>
-    <a href="zyuwa.html"><strong>ジュワ―ラ</strong></a><br>
-   旧友。<br>
-    <em>「ジュワジュワはいつも怒ってそうだったけど…今はとっても笑顔で安心だね」</em>
-  </p>
-</div>
+    <p>
+      <a href="zyuwa.html"><strong>ジュワ―ラ</strong></a><br>
+      旧友。<br>
+      <em>「ジュワジュワはいつも怒ってそうだったけど…今はとっても笑顔で安心だね」</em>
+    </p>
+
+  </div>
+
 </div>
 </body>
+</html>
