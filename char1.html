@@ -39,7 +39,6 @@ p {
   margin-bottom: 14px;
 }
 
-/* 画像並べ */
 .gallery {
   display: flex;
   gap: 15px;
@@ -66,6 +65,16 @@ p {
 a {
   color: blue;
 }
+
+.profile {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 40px;
+}
+
+.profile p {
+  margin: 0;
+}
 </style>
 </head>
 
@@ -84,12 +93,16 @@ a {
   </div>
   <h2>「オレはもう…マジックなんてしねぇって決めたんだよ」</h2>
 
-  
-
   <div class="box">
-    <p>性別：男　　　　　　年齢：27</p>
-    <p>身長：178.8cm  　　体重：68kg</p>
-    <p>趣味：食事 　　 　　誕生日：12月17日</p>
+    <div class="profile">
+      <p>性別：男</p>
+      <p>年齢：27</p>
+      <p>身長：178.8cm</p>
+      <p>体重：68kg</p>
+      <p>趣味：食事</p>
+      <p>誕生日：12月17日</p>
+    </div>
+
     <p>職業：マジックインストラクター</p>
     <p>好きなもの：マーマレード、煙草</p>
     <p>嫌いなもの：牡蠣、低気圧</p>
