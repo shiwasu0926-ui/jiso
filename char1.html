@@ -21,12 +21,23 @@ body {
   padding: 20px;
 }
 
-  .box {
+.box {
   border: 1px solid #ccc;
   padding: 15px;
   margin-top: 20px;
 }
 
+/* ←追加ここ */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.face {
+  width: 150px;
+  border-radius: 10px;
+}
 </style>
 </head>
 
@@ -35,49 +46,62 @@ body {
   <a href="index.html">トップ</a> ＞
   <a href="world1.html">エンドロールは笑顔とともに</a>
 
- <p> <h1>ショー・ラジェック</h1></p>
-  <h2>「オレはもう…マジックなんてしねぇって決めたんだよ」</h2>
+  <div class="header">
 
-<p>
-今は引退した元プロマジシャン。現在は師としてマジックの技術を伝授している。<br>
-</p>
-  
-<div class="box">
-<p>性別：男　　　　　　年齢：27</p>
-<p>身長：178.8cm  　　体重：68kg</p>
-<p>趣味：食事 　　 　　誕生日：12月17日</p><br>
-<p>職業：マジックインストラクター</p>
-<p>好きなもの：マーマレード、煙草</p>
-<p>嫌いなもの：牡蠣、低気圧</p>
-<p>得意なマジック：花を出すマジック</p>
-</div><br>
+    <div>
+      <h1>ショー・ラジェック</h1>
+      <h2>「オレはもう…マジックなんてしねぇって決めたんだよ」</h2>
+
+      <p>
+      今は引退した元プロマジシャン。現在は師としてマジックの技術を伝授している。
+      </p>
+    </div>
+
+    <img src="face.jpg" class="face">
+
+  </div>
+
+  <div class="box">
+    <p>性別：男　　　　　　年齢：27</p>
+    <p>身長：178.8cm  　　体重：68kg</p>
+    <p>趣味：食事 　　 　　誕生日：12月17日</p>
+    <p>職業：マジックインストラクター</p>
+    <p>好きなもの：マーマレード、煙草</p>
+    <p>嫌いなもの：牡蠣、低気圧</p>
+    <p>得意なマジック：花を出すマジック</p>
+  </div>
+
   <h2>関係キャラクター</h2>
 
-<div class="box">
+  <div class="box">
 
-  <p>
-    <a href="zyuwa.html"><strong>ジュワ―ラ</strong></a><br>
-    元パートナー兼　<s>　親友　</s>　幼馴染。<br>
-    <em>「親友ではねぇからいい加減その肩書きをやめろ」</em>
-  </p>
- <p>
-    <a href="emi.html"><strong>エミール</strong></a><br>
-    <a href="demi.html"><strong>ヂェミス</strong></a><br>
-    師弟関係。<br>
-    <em>「まあ、伸びしろはあるんじゃねぇか」</em>
-  </p>
- <p>
-    <a href="selu.html"><strong>シェル</strong></a><br>
-  兄弟。<br>
-    <em>「毎回連絡もなしに家にあがってんじゃねぇッ…」</em>
-  </p>
+    <p>
+      <a href="zyuwa.html"><strong>ジュワ―ラ</strong></a><br>
+      元パートナー兼　<s>親友</s>　幼馴染。<br>
+      <em>「親友ではねぇからいい加減その肩書きをやめろ」</em>
+    </p>
 
-  <p>
-    <a href="cry.html"><strong>クライ</strong></a><br>
-    想い人。<br>
-    <em>「……。…愛してたよ、心からな。」</em>
-  </p>
-</div>
+    <p>
+      <a href="emi.html"><strong>エミール</strong></a><br>
+      <a href="demi.html"><strong>ヂェミス</strong></a><br>
+      師弟関係。<br>
+      <em>「まあ、伸びしろはあるんじゃねぇか」</em>
+    </p>
+
+    <p>
+      <a href="selu.html"><strong>シェル</strong></a><br>
+      兄弟。<br>
+      <em>「毎回連絡もなしに家にあがってんじゃねぇッ…」</em>
+    </p>
+
+    <p>
+      <a href="cry.html"><strong>クライ</strong></a><br>
+      想い人。<br>
+      <em>「……。…愛してたよ、心からな。」</em>
+    </p>
+
+  </div>
+
 </div>
 </body>
 </html>
