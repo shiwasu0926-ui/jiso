@@ -22,19 +22,6 @@ body {
   padding: 30px;
 }
 
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 20px;
-  margin-bottom: 30px;
-}
-
-.face {
-  width: 180px;
-  border-radius: 10px;
-}
-
 h1 {
   margin-bottom: 10px;
   border-bottom: 1px solid #ddd;
@@ -42,7 +29,7 @@ h1 {
 }
 
 h2 {
-  margin: 10px 0 0;
+  margin: 10px 0 15px;
   font-weight: normal;
   color: #555;
 }
@@ -50,6 +37,18 @@ h2 {
 p {
   line-height: 1.8;
   margin-bottom: 14px;
+}
+
+/* 画像並べ */
+.gallery {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.gallery img {
+  width: 150px;
+  border-radius: 10px;
 }
 
 .box {
@@ -65,12 +64,7 @@ p {
 }
 
 a {
-  color: #333;
-  text-decoration:blue;
-}
-
-a:hover {
-  color: #888;
+  color: blue;
 }
 </style>
 </head>
@@ -82,12 +76,14 @@ a:hover {
   <a href="work.html">創作一覧</a> ＞
   <a href="world1.html">エンドロールは笑顔とともに</a>
 
-  <div class="header">
-    <div>
-      <h1>ショー・ラジェック</h1>
-      <h2>「オレはもう…マジックなんてしねぇって決めたんだよ」</h2>
-    </div>
-    <img src="Syou.jpg" class="face">
+  <h1>ショー・ラジェック</h1>
+
+  <h2>「オレはもう…マジックなんてしねぇって決めたんだよ」</h2>
+
+  <div class="gallery">
+    <img src="Syou1.jpg">
+    <img src="Syou2.jpg">
+    <img src="Syou3.jpg">
   </div>
 
   <div class="box">
