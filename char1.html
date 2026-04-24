@@ -9,10 +9,11 @@
 
 <style>
 body {
-   margin: 0;
+  margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   background: #f0f0f0;
-  color: #222
+  color: #222;
+  font-weight: 400;
 }
 
 .container {
@@ -22,49 +23,75 @@ body {
   padding: 20px;
 }
 
-.box {
-  border: 1px solid #ccc;
-  padding: 15px;
-  margin-top: 20px;
-}
-
 .header {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 10px;
+  gap: 15px;
 }
 
 .face {
   width: 180px;
   border-radius: 10px;
-  margin-left: 0px;
+}
+
+h1 {
+  margin: 0 0 10px;
+  font-weight: 600;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 8px;
+}
+
+h2 {
+  margin: 0 0 15px;
+  font-weight: 500;
+  color: #555;
+}
+
+p {
+  line-height: 1.7;
+  margin: 0 0 10px;
+}
+
+.box {
+  border: 1px solid #e5e5e5;
+  padding: 15px;
+  margin-top: 20px;
+  background: #fafafa;
+  border-radius: 6px;
+}
+
+strong {
+  font-weight: 500;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #888;
 }
 </style>
 </head>
 
 <body>
 <div class="container">
-   <a href="index.html">トップ</a> ＞
-   <a href="work.html">創作一覧</a> ＞
+
+  <a href="index.html">トップ</a> ＞
+  <a href="work.html">創作一覧</a> ＞
   <a href="world1.html">エンドロールは笑顔とともに</a>
 
   <div class="header">
-
     <div>
       <h1>ショー・ラジェック</h1>
-
-       <img src="Syou.jpg" class="face">
-      
       <h2>「オレはもう…マジックなんてしねぇって決めたんだよ」</h2>
-
       <p>
       今は引退した元プロマジシャン。現在は師としてマジックの技術を伝授している。
       </p>
     </div>
-
-   
-
+    <img src="Syou.jpg" class="face">
   </div>
 
   <div class="box">
