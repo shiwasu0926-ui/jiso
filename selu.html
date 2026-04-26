@@ -10,58 +10,123 @@
 <style>
 body {
   margin: 0;
-  font-family: sans-serif;
+  font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
   background: #f0f0f0;
+  color: #222;
 }
 
 .container {
   max-width: 900px;
   margin: auto;
   background: white;
+  padding: 30px;
+}
+
+h1 {
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 8px;
+}
+
+h2 {
+  margin: 10px 0 15px;
+  font-weight: normal;
+  color: #555;
+}
+
+p {
+  line-height: 1.8;
+  margin-bottom: 14px;
+}
+
+
+.gallery {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.gallery img {
+  width: 250px;
+  border-radius: 10px;
+}
+
+
+.profile {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 15px;
+}
+
+.profile p {
+  margin: 0;
+}
+
+.box {
+  border: 1px solid #e5e5e5;
   padding: 20px;
+  margin-top: 30px;
+  background: #fafafa;
+  border-radius: 8px;
 }
 
-  .box {
-  border: 1px solid #ccc;
-  padding: 15px;
-  margin-top: 20px;
+.box p {
+  margin-bottom: 18px;
 }
 
+a {
+  color: blue;
+}
 </style>
 </head>
 
 <body>
 <div class="container">
+
   <a href="index.html">トップ</a> ＞
+  <a href="work.html">創作一覧</a> ＞
   <a href="world1.html">エンドロールは笑顔とともに</a>
 
- <p> <h1>シェル・ラジェック</h1></p>
-  <h2>「サンプル台詞」</h2>
+  <h1>シェル・ラジェック</h1>
 
-<p>
-キャラ説明<br>
-</p>
+  <div class="gallery">
+    <img src="selu1.jpg">
+    <img src="selu2.jpg">
+    <img src="selu3.jpg">
+  </div>
+
+  <h2>「たはーｗニーサンってば相変わらず機嫌わるわるッスねーｗ」</h2>
   
-<div class="box">
- <p>身長…　cm   体重…  kg</p>
-<p>好きなもの…　　嫌いなもの…</p>
- <p>趣味…</p>
-</div><br>
-  <h2>関係キャラクター</h2>
+<p> ショーの弟。デリカシーがなくチャラい。 </p>
 
-<div class="box">
+  <div class="box">
+    <div class="profile">
+      <p>性別：男</p>
+      <p>年齢：22</p>
+      <p>身長：180.5cm</p>
+      <p>体重：69.3kg</p>
+      <p>趣味：ガチャ回し</p>
+      <p>誕生日：2月2日</p>
+    </div>
 
-  <p>
-    <a href="char1.html"><strong>ショー</strong></a><br>
-    幼馴染。<br>
-    <em>「昔から変わらないやつだな」</em>
-  </p>
+    <p>職業：大学生</p>
+    <p>好きなもの：チェリーのシロップ漬け、映えるもの</p>
+    <p>嫌いなもの：ホタテ貝、虫</p>
+    <p>得意なマジック：<s>　　　</s></p>
+  </div>
 
-  <p>
-    <a href="zyuwa.html"><strong>ジュワ―ラ</strong></a><br>
-    ライバル。<br>
-    <em>「次は負けない」</em>
-  </p>
-</div>
-</div>
+  <h2 style="margin-top:50px;">関係キャラクター</h2>
+
+  <div class="box">
+      <a href="char1.html"><strong>ショー</strong></a><br>
+      兄弟。<br>
+      <em>「ニーサンってなんかいつもキレてるッスよねーｗまあ悪い人じゃないッスよ一応？」</em>
+    </div>
+
+  <div class="box">
+      <a href="zyuwa.html"><strong>ジュワ―ラ</strong></a><br>
+      旧友。<br>
+      <em>「ベッツに嫌いじゃないスけど…なんか絡みづらいんスよ。自分とは違うチャラさだし～」</em>
+    </div>
 </body>
+</html>
