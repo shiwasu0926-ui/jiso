@@ -3,67 +3,147 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title> 靣光琉</title>
+<title>靣光琉</title>
 
 <meta name="robots" content="noindex, nofollow">
 
 <style>
 body {
   margin: 0;
-  font-family: sans-serif;
+  font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
   background: #f0f0f0;
+  color: #222;
 }
 
 .container {
   max-width: 900px;
   margin: auto;
   background: white;
+  padding: 30px;
+}
+
+h1 {
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 8px;
+}
+
+h2 {
+  margin: 10px 0 15px;
+  font-weight: normal;
+  color: #555;
+}
+
+p {
+  line-height: 1.8;
+  margin-bottom: 14px;
+}
+
+.gallery {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.gallery img {
+  width: 250px;
+  border-radius: 10px;
+}
+
+.box {
+  border: 1px solid #e5e5e5;
   padding: 20px;
+  margin-top: 30px;
+  background: #fafafa;
+  border-radius: 8px;
 }
 
-  .box {
-  border: 1px solid #ccc;
-  padding: 15px;
-  margin-top: 20px;
+.box p {
+  margin-bottom: 18px;
 }
 
+a {
+  color: blue;
+}
+
+.profile {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px 20px;
+}
+
+.profile p {
+  margin: 0;
+  padding: 6px 0;
+  border-bottom: 1px solid #eee;
+}
+
+@media (min-width: 768px) {
+  .profile {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px 40px;
+  }
+}
 </style>
 </head>
 
 <body>
 <div class="container">
+
   <a href="index.html">トップ</a> ＞
+  <a href="work.html">創作一覧</a> ＞
   <a href="world2.html">天晴れ！学校征服定例会議！</a>
 
- <p> <h1> 靣光琉（おもてみつる）</h1></p>
-  <h2>「サンプル台詞」</h2>
+  <h1>靣光琉（おもてみつる）</h1>
 
-<p>
-キャラ説明<br>
-</p>
-  
+  <div class="gallery">
+    <img src="mituru1.jpg">
+    <img src="mituru2.jpg">
+    <img src="mituru3.jpg">
+  </div>
+
+  <h2>「…………✌」</h2>
+
+  <p>常に仮面をつけている男子学生。会話も動作で行うことが多い。</p>
+
+  <div class="box">
+    <div class="profile">
+      <p>性別：男</p>
+      <p>年齢：17</p>
+      <p>身長：175.5cm</p>
+      <p>体重：66.2kg</p>
+      <p>一人称：僕</p>
+      <p>二人称：キミ、（名前）くん・ちゃん</p>
+      <p>好きなもの：ハンバーガー、アトラクション</p>
+      <p>嫌いなもの：グリンピース、服装検査</p>
+      <p>趣味：影絵</p>
+      <p>特技：アクロバット</p>
+      <p>苦手：仮面にベタベタ触られること</p>
+      <p>誕生日：9月6日</p>
+      <p>血液型：O型</p>
+      <p>利き手：左</p>
+      <p>役職：演劇部副部長（照明担当）</p>
+      <p>クラス：2年3組</p>
+      <p>部活：演劇部</p>
+      <p>得意・苦手科目：生物、数ⅱ
+      </p>
+
+    </div>
+  </div>
+
+  <h2 style="margin-top:50px;">関係キャラクター</h2>
+
+  <div class="box">
+    <a href="sinn.html"><strong>古江田真</strong></a><br>
+    友達。<br>
+    <em>「……………！👍」</em>
+  </div>
+
 <div class="box">
- <p>身長…　cm   体重…  kg</p>
-<p>好きなもの…　　嫌いなもの…</p>
- <p>趣味…</p>
-</div><br>
-  <h2>関係キャラクター</h2>
-
-<div class="box">
-
-  <p>
-    <a href="char2.html"><strong>キャラ②</strong></a><br>
-    幼馴染。<br>
-    <em>「昔から変わらないやつだな」</em>
-  </p>
-
-  <p>
-    <a href="char3.html"><strong>キャラ③</strong></a><br>
-    ライバル。<br>
-    <em>「次は負けない」</em>
-  </p>
+    <a href="yuusei.html"><strong>金蜜優生</strong></a><br>
+    クラスメイト。<br>
+    <em>「…………💰」</em>
+  </div>
 </div>
- </div>
-  
 </body>
 </html>
