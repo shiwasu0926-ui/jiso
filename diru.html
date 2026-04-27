@@ -50,16 +50,6 @@ p {
   border-radius: 10px;
 }
 
-.profile {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px 15px;
-}
-
-.profile p {
-  margin: 0;
-}
-
 .box {
   border: 1px solid #e5e5e5;
   padding: 20px;
@@ -75,6 +65,25 @@ p {
 a {
   color: blue;
 }
+
+.profile {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px 20px;
+}
+
+.profile p {
+  margin: 0;
+  padding: 6px 0;
+  border-bottom: 1px solid #eee;
+}
+
+@media (min-width: 768px) {
+  .profile {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px 40px;
+  }
+}
 </style>
 </head>
 
@@ -89,13 +98,13 @@ a {
 
   <div class="gallery">
     <img src="diru1.jpg">
-     <img src="diru2.jpg">
-     <img src="diru3.jpg">
+    <img src="diru2.jpg">
+    <img src="diru3.jpg">
   </div>
 
   <h2>「お気持ちは結構、お品物のみ頂戴致します。此方実弟の好物でして。」</h2>
   
-<p> ヂェミス、ヂェライカの兄。定期的にショーたちの元を訪れる。 </p>
+  <p>ヂェミス、ヂェライカの兄。定期的にショーたちの元を訪れる。</p>
   
   <div class="box">
     <div class="profile">
@@ -103,25 +112,31 @@ a {
       <p>年齢：28</p>
       <p>身長：177.7cm</p>
       <p>体重：65.6kg</p>
+      <p>一人称：当方</p>
+      <p>二人称：（苗字）様、貴様</p>
+      <p>好きなもの：カルボナーラ、兄弟</p>
+      <p>嫌いなもの：刃の通らないカボチャ、兄弟に害為すもの</p>
       <p>趣味：お洒落な食器集め</p>
+      <p>特技：家事全般</p>
+      <p>苦手：地図を読むこと</p>
       <p>誕生日：1月14日</p>
+      <p>血液型：A</p>
+      <p>利き手：右</p>
     </div>
 
     <p>職業：カフェオーナー</p>
-    <p>好きなもの：カルボナーラ、兄弟</p>
-    <p>嫌いなもの：刃の通らないカボチャ、兄弟に害為すもの</p>
     <p>得意なマジック：簡単な手品なら可能</p>
   </div>
 
   <h2 style="margin-top:50px;">関係キャラクター</h2>
 
   <div class="box">
-       <a href="demi.html"><strong>ヂェミス</strong></a><br>
-      <a href="diraika.html"><strong>ヂェライカ</strong></a><br>
+    <a href="demi.html"><strong>ヂェミス</strong></a><br>
+    <a href="diraika.html"><strong>ヂェライカ</strong></a><br>
     三兄弟。<br>
-      <em>「我が命に等しいかけがえのない存在で御座います。…関わる際は是非ご注意を。」</em>
-    </div>
+    <em>「我が命に等しいかけがえのない存在で御座います。…関わる際は是非ご注意を。」</em>
+  </div>
 
-  
+</div>
 </body>
 </html>
