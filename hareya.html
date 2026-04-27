@@ -63,17 +63,91 @@ p {
 }
 
 a {
+  color: blue;<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>天國晴哉</title>
+
+<meta name="robots" content="noindex, nofollow">
+
+<style>
+body {
+  margin: 0;
+  font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  background: #f0f0f0;
+  color: #222;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  background: white;
+  padding: 30px;
+}
+
+h1 {
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 8px;
+}
+
+h2 {
+  margin: 10px 0 15px;
+  font-weight: normal;
+  color: #555;
+}
+
+p {
+  line-height: 1.8;
+  margin-bottom: 14px;
+}
+
+.gallery {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.gallery img {
+  width: 250px;
+  border-radius: 10px;
+}
+
+.box {
+  border: 1px solid #e5e5e5;
+  padding: 20px;
+  margin-top: 30px;
+  background: #fafafa;
+  border-radius: 8px;
+}
+
+.box p {
+  margin-bottom: 18px;
+}
+
+a {
   color: blue;
 }
 
 .profile {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px 15px;
+  grid-template-columns: 1fr;
+  gap: 12px 20px;
 }
 
 .profile p {
   margin: 0;
+  padding: 6px 0;
+  border-bottom: 1px solid #eee;
+}
+
+@media (min-width: 768px) {
+  .profile {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px 40px;
+  }
 }
 </style>
 </head>
@@ -86,14 +160,16 @@ a {
   <a href="world1.html">天晴れ！学校征服定例会議！</a>
 
   <h1>天國晴哉（あまぐにはれや）</h1>
-<div class="gallery">
+
+  <div class="gallery">
     <img src="hareya1.jpg">
     <img src="hareya2.jpg">
     <img src="hareya3.jpg">
   </div>
+
   <h2>「実に天晴れ！我が野望ももうじき達成される日がきたであります！！！」</h2>
 
-  <p> 破天荒な生徒会長。学校征服を目論んでいる、らしい。 </p>
+  <p>破天荒な生徒会長。学校征服を目論んでいる、らしい。</p>
 
   <div class="box">
     <div class="profile">
@@ -102,22 +178,21 @@ a {
       <p>身長：162.4cm</p>
       <p>体重：54kg</p>
       <p>一人称：吾輩</p>
-      <p>二人称：（名前）殿・役職</p>  
+      <p>二人称：（名前）殿・役職</p>
+      <p>好きなもの：釜めし、和風なもの</p>
+      <p>嫌いなもの：辛いもの、おばけ</p>
       <p>趣味：征服計画を練ること</p>
       <p>特技：けん玉</p>
       <p>苦手：スマホ操作</p>
       <p>誕生日：6月22日</p>
-      <p>血液型：A型</p>   
+      <p>血液型：A型</p>
+      <p>利き手：右</p>
+      <p>役職：生徒会会長</p>
       <p>クラス：3年1組</p>
       <p>部活：囲碁部、伝統文様研究会</p>
-
+      <p>得意・苦手科目：古文・政治経済</p>
 
     </div>
-
-    <p>役職:生徒会会長</p>
-    <p>好きなもの：釜めし、和風なもの</p>
-    <p>嫌いなもの：辛いもの、おばけ</p>
-    <p>得意科目・苦手科目：古文・政治経済</p>
   </div>
 
   <h2 style="margin-top:50px;">関係キャラクター</h2>
@@ -125,21 +200,22 @@ a {
   <div class="box">
     <a href="rei.html"><strong>杜若怜</strong></a><br>
     <a href="kisaki.html"><strong>鈴瑞ヶ咲妃</strong></a><br>
-     同学年生徒会役員。<br>
-      <em>「どちらも役立つお仲間でありますぞー！今後ともよろしく頼みたいであります！」</em>
-</div>
+    同学年生徒会役員。<br>
+    <em>「どちらも役立つお仲間でありますぞー！今後ともよろしく頼みたいであります！」</em>
+  </div>
 
-    <div class="box">
+  <div class="box">
     <a href="yuri.html"><strong>三陰由利</strong></a><br>
     後輩兼友人。<br>
-      <em>「めちゃんこ良い子であります！今後とも伸びしろに期待でありますぞ！」</em>
-</div>
-  
-         <div class="box">
-      <a href="yuusei.html"><strong>金蜜優生</strong></a><br>
-    後輩。<br>
-      <em>「吾輩ばかりからお金をむしり取るのはやめてほしいでありますッ…」</em>
-    </div>
+    <em>「めちゃんこ良い子であります！今後とも伸びしろに期待でありますぞ！」</em>
+  </div>
 
+  <div class="box">
+    <a href="yuusei.html"><strong>金蜜優生</strong></a><br>
+    後輩。<br>
+    <em>「吾輩ばかりからお金をむしり取るのはやめてほしいでありますッ…」</em>
+  </div>
+
+</div>
 </body>
 </html>
