@@ -50,16 +50,6 @@ p {
   border-radius: 10px;
 }
 
-.profile {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px 15px;
-}
-
-.profile p {
-  margin: 0;
-}
-
 .box {
   border: 1px solid #e5e5e5;
   padding: 20px;
@@ -74,6 +64,25 @@ p {
 
 a {
   color: blue;
+}
+
+.profile {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px 20px;
+}
+
+.profile p {
+  margin: 0;
+  padding: 6px 0;
+  border-bottom: 1px solid #eee;
+}
+
+@media (min-width: 768px) {
+  .profile {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px 40px;
+  }
 }
 </style>
 </head>
@@ -94,7 +103,7 @@ a {
   </div>
 
   <h2>「心に残るショーをお届けできるよう、精一杯頑張らせて頂きますね。」</h2>
-<p> ショーの弟子の1人。真面目で常に丁寧。 </p>
+  <p>ショーの弟子の1人。真面目で常に丁寧。</p>
   
   <div class="box">
     <div class="profile">
@@ -102,35 +111,43 @@ a {
       <p>年齢：19</p>
       <p>身長：173.1cm</p>
       <p>体重：63.1kg</p>
+      <p>一人称：僕</p>
+      <p>二人称：（名前）さん</p>
+      <p>好きなもの：グラタン、猫</p>
+      <p>嫌いなもの：レバー、軽薄な人</p>
       <p>趣味：料理</p>
+      <p>特技：動物を手懐ける</p>
+      <p>苦手：無計画な行動</p>
       <p>誕生日：6月8日</p>
+      <p>血液型：A</p>
+      <p>利き手：右</p>
     </div>
 
     <p>職業：駆け出しマジシャン</p>
-    <p>好きなもの：グラタン、猫</p>
-    <p>嫌いなもの：レバー、軽薄な人</p>
     <p>得意なマジック：帽子を用いたマジック</p>
   </div>
 
   <h2 style="margin-top:50px;">関係キャラクター</h2>
 
   <div class="box">
-      <a href="emi.html"><strong>エミール</strong></a><br>
-      想い人。<br>
-      <em>「す、す好きなどではありませんが…エミールさんは優しくて素敵な方だとは思いますっ…。」</em>
-    </div>
-
-     <div class="box">
-      <a href="char1.html"><strong>ショー</strong></a><br>
-      師弟。<br>
-      <em>「いつも多くのことを学ばせていただいているんです。」</em>
-    </div>
+    <a href="emi.html"><strong>エミール</strong></a><br>
+    想い人。<br>
+    <em>「れ、れれ恋愛感情は特段抱いておりませんが…エミールさんは優しくて素敵な方だとは思いますっ…。」</em>
+  </div>
 
   <div class="box">
-      <a href="diru.html"><strong>ヂル</strong></a><br>
-      <a href="diraika.html"><strong>ヂェライカ</strong></a><br>
-      三兄弟。<br>
-      <em>「尊敬できる僕のお兄ちゃんとお姉ちゃんです。少々不思議なところもありますが…」</em>
-    </div>
+    <a href="char1.html"><strong>ショー</strong></a><br>
+    師弟。<br>
+    <em>「いつも多くのことを学ばせていただいているんです。」</em>
+  </div>
+
+  <div class="box">
+    <a href="diru.html"><strong>ヂル</strong></a><br>
+    <a href="diraika.html"><strong>ヂェライカ</strong></a><br>
+    三兄弟。<br>
+    <em>「尊敬できる僕のお兄ちゃんとお姉ちゃんです。少々不思議なところもありますが…」</em>
+  </div>
+
+</div>
 </body>
 </html>
