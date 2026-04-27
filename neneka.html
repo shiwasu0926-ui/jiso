@@ -10,60 +10,136 @@
 <style>
 body {
   margin: 0;
-  font-family: sans-serif;
+  font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
   background: #f0f0f0;
+  color: #222;
 }
 
 .container {
   max-width: 900px;
   margin: auto;
   background: white;
+  padding: 30px;
+}
+
+h1 {
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 8px;
+}
+
+h2 {
+  margin: 10px 0 15px;
+  font-weight: normal;
+  color: #555;
+}
+
+p {
+  line-height: 1.8;
+  margin-bottom: 14px;
+}
+
+.gallery {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.gallery img {
+  width: 250px;
+  border-radius: 10px;
+}
+
+.box {
+  border: 1px solid #e5e5e5;
   padding: 20px;
+  margin-top: 30px;
+  background: #fafafa;
+  border-radius: 8px;
 }
 
-  .box {
-  border: 1px solid #ccc;
-  padding: 15px;
-  margin-top: 20px;
+.box p {
+  margin-bottom: 18px;
 }
 
+a {
+  color: blue;
+}
+
+.profile {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px 20px;
+}
+
+.profile p {
+  margin: 0;
+  padding: 6px 0;
+  border-bottom: 1px solid #eee;
+}
+
+@media (min-width: 768px) {
+  .profile {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px 40px;
+  }
+}
 </style>
 </head>
 
 <body>
 <div class="container">
+
   <a href="index.html">トップ</a> ＞
+  <a href="work.html">創作一覧</a> ＞
   <a href="world2.html">天晴れ！学校征服定例会議！</a>
 
- <p> <h1>彩藤寧々香（あやふじねねか）</h1></p>
-  <h2>「サンプル台詞」</h2>
+  <h1>彩藤寧々香（さいふじねねか）</h1>
 
-<p>
-キャラ説明<br>
-</p>
-  
-<div class="box">
- <p>身長…　cm   体重…  kg</p>
-<p>好きなもの…　　嫌いなもの…</p>
- <p>趣味…</p>
-</div><br>
-  <h2>関係キャラクター</h2>
+  <div class="gallery">
+    <img src="neneka1.jpg">
+    <img src="neneka2.jpg">
+    <img src="neneka3.jpg">
+  </div>
 
-<div class="box">
+  <h2>「あんなボロ部活に連チャン通うとかガチ埃に汚染されるっつーの。まじありえんし」</h2>
 
-  <p>
-    <a href="char2.html"><strong>キャラ②</strong></a><br>
-    幼馴染。<br>
-    <em>「昔から変わらないやつだな」</em>
-  </p>
+  <p>演劇部幽霊部員。顧問の先生に恋している。</p>
 
-  <p>
-    <a href="char3.html"><strong>キャラ③</strong></a><br>
-    ライバル。<br>
-    <em>「次は負けない」</em>
-  </p>
+  <div class="box">
+    <div class="profile">
+      <p>性別：女</p>
+      <p>年齢：16</p>
+      <p>身長：146.5cm</p>
+      <p>体重：40.9kg</p>
+      <p>一人称：ウチ</p>
+      <p>二人称：お前、（名前呼び捨て）</p>
+      <p>好きなもの：サンデーパフェ、プチプラ</p>
+      <p>嫌いなもの：ヨーグルト、超萎え</p>
+      <p>趣味：ショッピング</p>
+      <p>特技：メイク</p>
+      <p>苦手：きっちきちスケジュール</p>
+      <p>誕生日：2月14日</p>
+      <p>血液型：AB型</p>
+      <p>利き手：両手</p>
+      <p>役職：演劇部部員（部隊美術担当）</p>
+      <p>クラス：1年5組</p>
+      <p>部活：演劇部、美術部</p>
+      <p>得意・苦手科目：美術、化学
+      </p>
+
+    </div>
+  </div>
+
+  <h2 style="margin-top:50px;">関係キャラクター</h2>
+
+  <div class="box">
+    <a href="sinn.html"><strong>古江田真</strong></a><br>
+     <a href="mituru.html"><strong>靣光琉</strong></a><br>
+    部活仲間。<br>
+    <em>「マージで参加催促うっさいし。顧問がいなきゃあんな部活行くわけないし。」</em>
+  </div>
+
 </div>
- </div>
-  
 </body>
 </html>
