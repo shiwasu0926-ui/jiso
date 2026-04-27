@@ -50,16 +50,6 @@ p {
   border-radius: 10px;
 }
 
-.profile {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px 15px;
-}
-
-.profile p {
-  margin: 0;
-}
-
 .box {
   border: 1px solid #e5e5e5;
   padding: 20px;
@@ -75,6 +65,25 @@ p {
 a {
   color: blue;
 }
+
+.profile {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px 20px;
+}
+
+.profile p {
+  margin: 0;
+  padding: 6px 0;
+  border-bottom: 1px solid #eee;
+}
+
+@media (min-width: 768px) {
+  .profile {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px 40px;
+  }
+}
 </style>
 </head>
 
@@ -89,13 +98,13 @@ a {
 
   <div class="gallery">
     <img src="diraika1.jpg">
-     <img src="diraika2.jpg">
-     <img src="diraika3.jpg">
+    <img src="diraika2.jpg">
+    <img src="diraika3.jpg">
   </div>
 
   <h2>「………お初にお目にかかり…ます。私めは……ええと…」</h2>
   
-<p> ヂェミスの姉。基本的にヂルを介して会話をする。 </p>
+  <p>ヂェミスの姉。基本的にヂルを介して会話をする。</p>
   
   <div class="box">
     <div class="profile">
@@ -103,25 +112,31 @@ a {
       <p>年齢：26</p>
       <p>身長：169.1cm</p>
       <p>体重：60.1kg</p>
-      <p>趣味：カリグラフィー</p>
+      <p>一人称：私（わたくし）め</p>
+      <p>二人称：貴方様、（氏名）様</p>
+      <p>好きなもの：ラザニア、ジャズミュージック</p>
+      <p>嫌いなもの：桃、力勝負</p>
+      <p>趣味：オルゴール鑑賞</p>
+      <p>特技：コーヒー豆のブレンド</p>
+      <p>苦手：人との対話</p>
       <p>誕生日：1月14日</p>
+      <p>血液型：B</p>
+      <p>利き手：左</p>
     </div>
 
     <p>職業：カフェスタッフ（バリスタ）</p>
-    <p>好きなもの：ラザニア、オルゴール</p>
-    <p>嫌いなもの：桃、力勝負</p>
     <p>得意なマジック：<s>　　　</s></p>
   </div>
 
   <h2 style="margin-top:50px;">関係キャラクター</h2>
 
   <div class="box">
-       <a href="demi.html"><strong>ヂェミス</strong></a><br>
-      <a href="diru.html"><strong>ヂル</strong></a><br>
+    <a href="demi.html"><strong>ヂェミス</strong></a><br>
+    <a href="diru.html"><strong>ヂル</strong></a><br>
     三兄弟。<br>
-      <em>「…優しい…大切な………家族、です……。」</em>
-    </div>
+    <em>「…優しい…大切な………家族、です……。」</em>
+  </div>
 
-  
+</div>
 </body>
 </html>
