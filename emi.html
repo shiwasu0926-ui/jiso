@@ -39,7 +39,6 @@ p {
   margin-bottom: 14px;
 }
 
-
 .gallery {
   display: flex;
   gap: 15px;
@@ -49,17 +48,6 @@ p {
 .gallery img {
   width: 250px;
   border-radius: 10px;
-}
-
-
-.profile {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px 15px;
-}
-
-.profile p {
-  margin: 0;
 }
 
 .box {
@@ -77,6 +65,25 @@ p {
 a {
   color: blue;
 }
+
+.profile {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px 20px;
+}
+
+.profile p {
+  margin: 0;
+  padding: 6px 0;
+  border-bottom: 1px solid #eee;
+}
+
+@media (min-width: 768px) {
+  .profile {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px 40px;
+  }
+}
 </style>
 </head>
 
@@ -91,13 +98,13 @@ a {
 
   <div class="gallery">
     <img src="emi1.jpg">
-     <img src="emi2.jpg">
-     <img src="emi3.jpg">
+    <img src="emi2.jpg">
+    <img src="emi3.jpg">
   </div>
 
   <h2>「わたしのマジックでみんなを笑顔にしてあげるの！！✨✨」</h2>
   
-<p> ショーの弟子の１人。常に前向きで笑顔。 </p>
+  <p>ショーの弟子の１人。常に前向きで笑顔。</p>
 
   <div class="box">
     <div class="profile">
@@ -105,28 +112,36 @@ a {
       <p>年齢：18</p>
       <p>身長：160.0cm</p>
       <p>体重：56.2kg</p>
+      <p>一人称：わたし</p>
+      <p>二人称：（名前）ちゃん・くん・さん</p>
+      <p>好きなもの：キャラメル、みんなの笑顔</p>
+      <p>嫌いなもの：ゴーヤ、人の悪口</p>
       <p>趣味：マジックの練習</p>
+      <p>特技：友達のプロフィールを覚えること</p>
+      <p>苦手：雷</p>
       <p>誕生日：8月31日</p>
+      <p>血液型：B</p>
+      <p>利き手：右</p>
     </div>
 
     <p>職業：駆け出しマジシャン</p>
-    <p>好きなもの：キャラメル、みんなの笑顔</p>
-    <p>嫌いなもの：ゴーヤ、人の悪口</p>
     <p>得意なマジック：旗を出すマジック</p>
   </div>
 
   <h2 style="margin-top:50px;">関係キャラクター</h2>
 
   <div class="box">
-      <a href="demi.html"><strong>ヂェミス</strong></a><br>
-      お友達。<br>
-      <em>「えっとねぇ✨いつもわたしと沢山お話してくれるの！とっても優しいんだよぉ！✨」</em>
-    </div>
+    <a href="demi.html"><strong>ヂェミス</strong></a><br>
+    お友達。<br>
+    <em>「えっとねぇ✨いつもわたしと沢山お話してくれるの！とっても優しいんだよぉ！✨」</em>
+  </div>
 
   <div class="box">
-      <a href="char1.html"><strong>ショー</strong></a><br>
-      師弟。<br>
-      <em>「ショーはマジックがすっごい上手なんだよー！✨また見てみたいなぁ✨」</em>
-    </div>
+    <a href="char1.html"><strong>ショー</strong></a><br>
+    師弟。<br>
+    <em>「ショーはマジックがすっごい上手なんだよー！✨また見てみたいなぁ✨」</em>
+  </div>
+
+</div>
 </body>
 </html>
