@@ -10,60 +10,135 @@
 <style>
 body {
   margin: 0;
-  font-family: sans-serif;
+  font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
   background: #f0f0f0;
+  color: #222;
 }
 
 .container {
   max-width: 900px;
   margin: auto;
   background: white;
+  padding: 30px;
+}
+
+h1 {
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 8px;
+}
+
+h2 {
+  margin: 10px 0 15px;
+  font-weight: normal;
+  color: #555;
+}
+
+p {
+  line-height: 1.8;
+  margin-bottom: 14px;
+}
+
+.gallery {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.gallery img {
+  width: 250px;
+  border-radius: 10px;
+}
+
+.box {
+  border: 1px solid #e5e5e5;
   padding: 20px;
+  margin-top: 30px;
+  background: #fafafa;
+  border-radius: 8px;
 }
 
-  .box {
-  border: 1px solid #ccc;
-  padding: 15px;
-  margin-top: 20px;
+.box p {
+  margin-bottom: 18px;
 }
 
+a {
+  color: blue;
+}
+
+.profile {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px 20px;
+}
+
+.profile p {
+  margin: 0;
+  padding: 6px 0;
+  border-bottom: 1px solid #eee;
+}
+
+@media (min-width: 768px) {
+  .profile {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px 40px;
+  }
+}
 </style>
 </head>
 
 <body>
 <div class="container">
+
   <a href="index.html">トップ</a> ＞
+  <a href="work.html">創作一覧</a> ＞
   <a href="world2.html">天晴れ！学校征服定例会議！</a>
 
- <p> <h1>鈴瑞ヶ咲妃（すずがさききさき）</h1></p>
-  <h2>「サンプル台詞」</h2>
+  <h1>鈴瑞ヶ咲妃（すずがさききさき）</h1>
 
-<p>
-キャラ説明<br>
-</p>
-  
-<div class="box">
- <p>身長…　cm   体重…  kg</p>
-<p>好きなもの…　　嫌いなもの…</p>
- <p>趣味…</p>
-</div><br>
-  <h2>関係キャラクター</h2>
+  <div class="gallery">
+    <img src="kisaki1.jpg">
+    <img src="kisaki2.jpg">
+    <img src="kisaki3.jpg">
+  </div>
 
-<div class="box">
+  <h2>「うふふ、本日も皆様がお元気なようで何よりですわ✨」</h2>
 
-  <p>
-    <a href="rei.html"><strong>怜</strong></a><br>
-    幼馴染。<br>
-    <em>「昔から変わらないやつだな」</em>
-  </p>
+  <p>穏やかで物腰柔らかいお嬢様。皆のお姉さん的存在。</p>
 
-  <p>
-    <a href="char3.html"><strong>キャラ③</strong></a><br>
-    ライバル。<br>
-    <em>「次は負けない」</em>
-  </p>
+  <div class="box">
+    <div class="profile">
+      <p>性別：女</p>
+      <p>年齢：18</p>
+      <p>身長：164.0cm</p>
+      <p>体重：54.2kg</p>
+      <p>一人称：私（わたくし）</p>
+      <p>二人称：貴方、（苗字）さん</p>
+      <p>好きなもの：ロシアケーキ、アロマキャンドル</p>
+      <p>嫌いなもの：ひきわり納豆、バイオレンスなもの</p>
+      <p>趣味：文通</p>
+      <p>特技：英会話</p>
+      <p>苦手：他者に厳しくすること</p>
+      <p>誕生日：3月12日</p>
+      <p>血液型：O型</p>
+      <p>利き手：右</p>
+      <p>役職：生徒会議長</p>
+      <p>クラス：3年6組</p>
+      <p>部活：日本舞踏部、英語研究会</p>
+      <p>得意・苦手科目：CEⅱ、数学B</p>
+
+    </div>
+  </div>
+
+  <h2 style="margin-top:50px;">関係キャラクター</h2>
+
+  <div class="box">
+    <a href="rei.html"><strong>杜若怜</strong></a><br>
+    親友<br>
+    <em>「怜さんとは一年生のときからのお友達なんですの。まっすぐでとても頼りになる方ですわ✨」</em>
+  </div>
+
+
 </div>
- </div>
-  
 </body>
 </html>
