@@ -68,12 +68,20 @@ a {
 
 .profile {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px 15px;
+  grid-template-columns: 120px 1fr;
+  gap: 12px 20px;
 }
 
 .profile p {
   margin: 0;
+  padding: 6px 0;
+  border-bottom: 1px solid #eee;
+}
+
+@media (max-width: 600px) {
+  .profile {
+    grid-template-columns: 1fr;
+  }
 }
 </style>
 </head>
@@ -142,5 +150,6 @@ a {
       想い人。<br>
       <em>「……。…愛してたよ、心からな。」</em>
     </div>
+</div>
 </body>
 </html>
