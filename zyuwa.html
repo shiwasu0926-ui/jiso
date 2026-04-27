@@ -39,7 +39,6 @@ p {
   margin-bottom: 14px;
 }
 
-
 .gallery {
   display: flex;
   gap: 15px;
@@ -49,17 +48,6 @@ p {
 .gallery img {
   width: 250px;
   border-radius: 10px;
-}
-
-
-.profile {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px 15px;
-}
-
-.profile p {
-  margin: 0;
 }
 
 .box {
@@ -76,6 +64,25 @@ p {
 
 a {
   color: blue;
+}
+
+.profile {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px 20px;
+}
+
+.profile p {
+  margin: 0;
+  padding: 6px 0;
+  border-bottom: 1px solid #eee;
+}
+
+@media (min-width: 768px) {
+  .profile {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px 40px;
+  }
 }
 </style>
 </head>
@@ -97,7 +104,7 @@ a {
 
   <h2>「やぁショーちゃん。そろそろまた俺と仕事をする気になったかな？」</h2>
   
-<p> （自称）ショーの親友。定期的にショー達に仕事のお誘いもしている。 </p>
+  <p>（自称）ショーの親友。定期的にショー達に仕事のお誘いもしている。</p>
 
   <div class="box">
     <div class="profile">
@@ -105,14 +112,19 @@ a {
       <p>年齢：27</p>
       <p>身長：184.6cm</p>
       <p>体重：73.2kg</p>
+      <p>一人称：俺</p>
+      <p>二人称：お前、名前呼び捨て</p>
       <p>趣味：チェス</p>
+      <p>特技：心を読むこと</p>
+      <p>苦手：友達を蔑ろにすること</p>
       <p>誕生日：9月26日</p>
+      <p>血液型：O</p>
+      <p>利き手：左</p>
+      <p>好きなもの：オムライス、カワウソ</p>
+      <p>嫌いなもの：酸味の強いもの、爬虫類</p>
+      <p>職業：プロマジシャン</p>
+      <p>得意なマジック：トランプを用いたマジック</p>
     </div>
-
-    <p>職業：プロマジシャン</p>
-    <p>好きなもの：オムライス、カワウソ</p>
-    <p>嫌いなもの：酸味の強いもの、爬虫類</p>
-    <p>得意なマジック：トランプを用いたマジック</p>
   </div>
 
   <h2 style="margin-top:50px;">関係キャラクター</h2>
@@ -121,8 +133,8 @@ a {
       <a href="char1.html"><strong>ショー</strong></a><br>
       元パートナー兼親友<br>
       <em>「俺の大切なパートナーであり親友さ。気難しいがほんとはめちゃくちゃ良い奴なんだぞ～＾＾」</em>
-    </div>
+  </div>
 
-
+</div>
 </body>
 </html>
