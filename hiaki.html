@@ -10,55 +10,147 @@
 <style>
 body {
   margin: 0;
-  font-family: sans-serif;
+  font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
   background: #f0f0f0;
+  color: #222;
 }
 
 .container {
   max-width: 900px;
   margin: auto;
   background: white;
+  padding: 30px;
+}
+
+h1 {
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 8px;
+}
+
+h2 {
+  margin: 10px 0 15px;
+  font-weight: normal;
+  color: #555;
+}
+
+p {
+  line-height: 1.8;
+  margin-bottom: 14px;
+}
+
+.gallery {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.gallery img {
+  width: 250px;
+  border-radius: 10px;
+}
+
+.box {
+  border: 1px solid #e5e5e5;
   padding: 20px;
+  margin-top: 30px;
+  background: #fafafa;
+  border-radius: 8px;
 }
 
-  .box {
-  border: 1px solid #ccc;
-  padding: 15px;
-  margin-top: 20px;
+.box p {
+  margin-bottom: 18px;
 }
 
+a {
+  color: blue;
+}
+
+.profile {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px 20px;
+}
+
+.profile p {
+  margin: 0;
+  padding: 6px 0;
+  border-bottom: 1px solid #eee;
+}
+
+@media (min-width: 768px) {
+  .profile {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px 40px;
+  }
+}
 </style>
 </head>
 
 <body>
 <div class="container">
+
   <a href="index.html">トップ</a> ＞
+  <a href="work.html">創作一覧</a> ＞
   <a href="world2.html">天晴れ！学校征服定例会議！</a>
 
- <p> <h1>泉ひあき（いずみひあき）</h1></p>
-  <h2>「サンプル台詞」</h2>
+  <h1>泉ひあき（いずみひあき）</h1>
 
-<p>
-キャラ説明<br>
-</p>
-  
-<div class="box">
- <p>身長…　cm   体重…  kg</p>
-<p>好きなもの…　　嫌いなもの…</p>
- <p>趣味…</p>
-</div><br>
-  <h2>関係キャラクター</h2>
+  <div class="gallery">
+    <img src="hiaki1.jpg">
+    <img src="hiaki2.jpg">
+    <img src="hiaki3.jpg">
+  </div>
 
-<div class="box">
+  <h2>「最近の瑠夏ちゃん様子おかしなぁい…？学校征服なんて行事アキくん知らんよぉ…？」</h2>
 
-  <p>
-    <a href="ruka.html"><strong>瑠夏</strong></a><br>
-    兄妹<br>
-    <em>「昔から変わらないやつだな」</em>
-  </p>
+  <p>瑠夏の兄。よく京都弁で話しているが生まれも育ちも埼玉</p>
+
+  <div class="box">
+    <div class="profile">
+      <p>性別：男</p>
+      <p>年齢：23</p>
+      <p>身長：170.0cm</p>
+      <p>体重：60.8kg</p>
+      <p>一人称：アキくん</p>
+      <p>二人称：（名前）はん、ちゃん、くん</p>
+      <p>好きなもの：天ぷら、赤べこさん</p>
+      <p>嫌いなもの：わさび、寒さ</p>
+      <p>趣味：絶景写真収集</p>
+      <p>特技：じゃんけん</p>
+      <p>苦手：反射的な行動</p>
+      <p>誕生日：10月28日</p>
+      <p>血液型：B型</p>
+      <p>利き手：右</p>
+      <p>職業：フリーライター</p>
+      <p>クラス：</p>
+      <p>部活：（元）剣道部</p>
+      <p>得意・苦手科目：情報・地学</p>
+
+    </div>
+  </div>
+
+  <h2 style="margin-top:50px;">関係キャラクター</h2>
+
+  <div class="box">
+    <a href="rei.html"><strong>杜若怜</strong></a><br>
+    <a href="kisaki.html"><strong>鈴瑞ヶ咲妃</strong></a><br>
+    同学年生徒会役員。<br>
+    <em>「どちらも役立つお仲間でありますぞー！今後ともよろしく頼みたいであります！」</em>
+  </div>
+
+  <div class="box">
+    <a href="yuri.html"><strong>三陰由利</strong></a><br>
+    後輩兼友人。<br>
+    <em>「めちゃんこ良い子であります！今後とも伸びしろに期待でありますぞ！」</em>
+  </div>
+
+  <div class="box">
+    <a href="yuusei.html"><strong>金蜜優生</strong></a><br>
+    後輩。<br>
+    <em>「吾輩ばかりからお金をむしり取るのはやめてほしいでありますッ…」</em>
+  </div>
 
 </div>
- </div>
-  
 </body>
 </html>
