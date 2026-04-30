@@ -10,60 +10,142 @@
 <style>
 body {
   margin: 0;
-  font-family: sans-serif;
+  font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
   background: #f0f0f0;
+  color: #222;
 }
 
 .container {
   max-width: 900px;
   margin: auto;
   background: white;
+  padding: 30px;
+}
+
+h1 {
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 8px;
+}
+
+h2 {
+  margin: 10px 0 15px;
+  font-weight: normal;
+  color: #555;
+}
+
+p {
+  line-height: 1.8;
+  margin-bottom: 14px;
+}
+
+.gallery {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.gallery img {
+  width: 250px;
+  border-radius: 10px;
+}
+
+.box {
+  border: 1px solid #e5e5e5;
   padding: 20px;
+  margin-top: 30px;
+  background: #fafafa;
+  border-radius: 8px;
 }
 
-  .box {
-  border: 1px solid #ccc;
-  padding: 15px;
-  margin-top: 20px;
+.box p {
+  margin-bottom: 18px;
 }
 
+a {
+  color: blue;
+}
+
+.profile {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px 20px;
+}
+
+.profile p {
+  margin: 0;
+  padding: 6px 0;
+  border-bottom: 1px solid #eee;
+}
+
+@media (min-width: 768px) {
+  .profile {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px 40px;
+  }
+}
 </style>
 </head>
 
 <body>
 <div class="container">
+
   <a href="index.html">トップ</a> ＞
+  <a href="work.html">創作一覧</a> ＞
   <a href="world2.html">天晴れ！学校征服定例会議！</a>
 
- <p> <h1>金蜜優生（かねみつゆうせい）</h1></p>
-  <h2>「サンプル台詞」</h2>
+  <h1>金蜜優生（かねみつゆうせい）</h1>
 
-<p>
-キャラ説明<br>
-</p>
-  
-<div class="box">
- <p>身長…　cm   体重…  kg</p>
-<p>好きなもの…　　嫌いなもの…</p>
- <p>趣味…</p>
-</div><br>
-  <h2>関係キャラクター</h2>
+  <div class="gallery">
+    <img src="yuusei1.jpg">
+    <img src="yuusei2.jpg">
+    <img src="yuusei3.jpg">
+  </div>
 
-<div class="box">
+  <h2>「折角こっちが仲良くしようっつってんだ、そっちも出すもん出すのがスジってもんだろオイ。」</h2>
 
-  <p>
-    <a href="yuri.html"><strong>三陰</strong></a><br>
-    幼馴染。<br>
-    <em>「昔から変わらないやつだな」</em>
-  </p>
+  <p>金好きのヤンキー。かなり横暴で自己中心的</p>
 
-  <p>
-    <a href="mituru.html"><strong> 靣</strong></a><br>
-    同クラス<br>
-    <em>「次は負けない」</em>
-  </p>
+  <div class="box">
+    <div class="profile">
+      <p>性別：男</p>
+      <p>年齢：17</p>
+      <p>身長：179.0cm</p>
+      <p>体重：70.1kg</p>
+      <p>一人称：俺様</p>
+      <p>二人称：テメェ、クソ〇〇、名前呼び捨て</p>
+      <p>好きなもの：餃子、金</p>
+      <p>嫌いなもの：なめこ、シケたもの</p>
+      <p>趣味：バスケ</p>
+      <p>特技：喧嘩</p>
+      <p>苦手：暗記</p>
+      <p>誕生日：11月23日</p>
+      <p>血液型：B型</p>
+      <p>利き手：右</p>
+      <p>役職：生徒会会計</p>
+      <p>クラス：2年2組</p>
+      <p>部活：帰宅部、バイト複数掛け持ち</p>
+      <p>得意・苦手科目：体育・日本史</p>
+
+    </div>
+  </div>
+
+  <h2 style="margin-top:50px;">関係キャラクター</h2>
+
+  <div class="box">
+    <a href="yuri.html"><strong>三陰由利</strong></a><br>
+   不仲。同中学出身<br>
+  <em>「グチグチ口答えしてうるせーっつの！！弁当のおかずしょっぺーしっ」</em>
+  </div>
+
+  <div class="box">
+    <a href="mituru"><strong>靣光琉</strong></a><br>
+   クラスメイト。<br>
+    <em>「んなキョーミねぇよ。いっつも仮面付けて喋りやがらねぇんだってーの」</em>
+  </div>
+
+  </div>
+
 </div>
- </div>
-  
 </body>
 </html>
