@@ -20,6 +20,7 @@ body {
   margin: auto;
   background: white;
   padding: 30px;
+  overflow-x: hidden; 
 }
 
 h1 {
@@ -39,14 +40,47 @@ p {
   margin-bottom: 14px;
 }
 
+
 .gallery {
   display: flex;
   gap: 15px;
-  margin-bottom: 25px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 10px 0;
 }
 
 .gallery img {
-  width: 250px;
+  flex: 0 0 70%;
+  max-width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  scroll-snap-align: center;
+  cursor: pointer;
+}
+
+
+.gallery::-webkit-scrollbar {
+  display: none;
+}
+
+
+#modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+#modal img {
+  max-width: 90%;
+  max-height: 90%;
   border-radius: 10px;
 }
 
@@ -85,6 +119,7 @@ a {
   }
 }
 </style>
+
 </head>
 
 <body>
@@ -97,9 +132,9 @@ a {
   <h1>ヂェミス・リース</h1>
 
   <div class="gallery">
-    <img src="demi1.jpg">
-    <img src="demi2.jpg">
-    <img src="demi3.jpg">
+    <img src="demi1.jpg"onclick="openModal(this)">
+    <img src="demi2.jpg"onclick="openModal(this)">
+    <img src="demi3.jpg"onclick="openModal(this)">
   </div>
 
   <h2>「心に残るショーをお届けできるよう、精一杯頑張らせて頂きますね。」</h2>
@@ -149,5 +184,24 @@ a {
   </div>
 
 </div>
+<div id="modal" onclick="closeModal()">
+  <img id="modalImg">
+</div>
+
+<script>
+function openModal(img) {
+  const modal = document.getElementById("modal");
+  const modalImg = document.getElementById("modalImg");
+
+  modal.style.display = "flex";
+  modalImg.src = img.src;
+}
+
+function closeModal() {
+  document.getElementById("modal").style.display = "none";
+}
+</script>
+
+  
 </body>
 </html>
