@@ -78,15 +78,10 @@ a {
   border-bottom: 1px solid #eee;
 }
 
-@media (max-width: 600px) {
-  .gallery {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .gallery img {
-    width: 100%;
-    max-width: 300px;
+@media (min-width: 768px) {
+  .profile {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px 40px;
   }
 }
 </style>
