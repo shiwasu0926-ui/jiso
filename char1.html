@@ -47,6 +47,7 @@ p {
 
 .gallery img {
   width: 250px;
+  height: auto;
   border-radius: 10px;
 }
 
@@ -82,6 +83,17 @@ a {
   .profile {
     grid-template-columns: 1fr 1fr;
     gap: 12px 40px;
+  }
+}
+  @media (max-width: 600px) {
+  .gallery {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .gallery img {
+    width: 100%;
+    max-width: 300px;
   }
 }
 </style>
