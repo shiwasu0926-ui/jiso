@@ -10,44 +10,165 @@
 <style>
 body {
   margin: 0;
-  font-family: sans-serif;
+  font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
   background: #f0f0f0;
+  color: #222;
 }
 
 .container {
   max-width: 900px;
   margin: auto;
   background: white;
+  padding: 30px;
+  overflow-x: hidden;
+}
+
+h1 {
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 8px;
+}
+
+h2 {
+  margin: 10px 0 15px;
+  font-weight: normal;
+  color: #555;
+}
+
+p {
+  line-height: 1.8;
+  margin-bottom: 14px;
+}
+
+
+.gallery {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 10px 0;
+}
+
+.gallery img {
+  flex: 0 0 70%;
+  max-width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  scroll-snap-align: center;
+  cursor: pointer;
+}
+
+.gallery::-webkit-scrollbar {
+  display: none;
+}
+
+
+#modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+#modal img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+}
+
+.box {
+  border: 1px solid #e5e5e5;
   padding: 20px;
+  margin-top: 30px;
+  background: #fafafa;
+  border-radius: 8px;
 }
 
-  .box {
-  border: 1px solid #ccc;
-  padding: 15px;
-  margin-top: 20px;
+.box p {
+  margin-bottom: 18px;
 }
 
+a {
+  color: blue;
+}
+
+.profile {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px 20px;
+}
+
+.profile p {
+  margin: 0;
+  padding: 6px 0;
+  border-bottom: 1px solid #eee;
+}
+
+@media (min-width: 768px) {
+  .profile {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px 40px;
+  }
+}
 </style>
 </head>
 
 <body>
 <div class="container">
+
   <a href="index.html">トップ</a> ＞
+  <a href="work.html">創作一覧</a> ＞
   <a href="world4.html">その他</a>
 
- <p> <h1>代理</h1></p>
-  <h2>「サンプル台詞」</h2>
+  <h1>代理</h1>
 
-<p>
-キャラ説明<br>
-</p>
+ 
+  <div class="gallery">
+    <img src="dairi1.jpg" onclick="openModal(this)">
+     <img src="dairi2.jpg" onclick="openModal(this)">
+     <img src="dairi3.jpg" onclick="openModal(this)">
+  </div>
+
+  <h2>「当サイトまで足を運んでくださり、ほんっとうにありがとうございます！✨」</h2>
   
-<div class="box">
- <p>身長…　cm   体重…  kg</p>
-<p>好きなもの…　　嫌いなもの…</p>
- <p>趣味…</p>
+  <p>当アカウントの代理キャラクター。作者ではない。</p>
+
+  <div class="box">
+    <div class="profile">
+      <p>詳細設定なし</p>
+  </div>
+  </div>
+
+  <h2 style="margin-top:50px;">関係キャラクター</h2>
+
+  <div class="box">
+    <em>「対人関係等もありませんよ～私は職務を全うするだけの存在です✨」</em>
+  </div>
+
+<div id="modal" onclick="closeModal()">
+  <img id="modalImg">
 </div>
- </div>
-  
+
+<script>
+function openModal(img) {
+  const modal = document.getElementById("modal");
+  const modalImg = document.getElementById("modalImg");
+
+  modal.style.display = "flex";
+  modalImg.src = img.src;
+}
+
+function closeModal() {
+  document.getElementById("modal").style.display = "none";
+}
+</script>
+
 </body>
 </html>
