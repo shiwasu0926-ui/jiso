@@ -21,18 +21,15 @@ body {
   padding: 20px;
 }
 
-
+/* 常に2列 */
 .card-list {
-  display: flex;
-  flex-wrap: wrap;   
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 12px;
   margin-bottom: 30px;
 }
 
-
 .card {
-  width: calc(50% - 6px); 
-  
   display: flex;
   align-items: center;
   gap: 12px;
@@ -57,6 +54,7 @@ body {
   height: 50px;
   border-radius: 50%;
   flex-shrink: 0;
+  object-fit: cover;
 }
 
 .text h3 {
@@ -70,7 +68,7 @@ body {
   color: #555;
 }
 
-
+/* スマホはサイズだけ調整（列はそのまま） */
 @media (max-width: 480px) {
   .icon {
     width: 44px;
@@ -114,31 +112,31 @@ body {
       <h3>エミール</h3>
       <p>マジシャンの少女</p>
     </div>
-  </a> 
+  </a>
 
-    <a href="demi.html" class="card">
+  <a href="demi.html" class="card">
     <img src="demi1.jpg" class="icon">
     <div class="text">
       <h3>ヂェミス</h3>
       <p>マジシャンの青年</p>
     </div>
-  </a> 
+  </a>
 
-    <a href="zyuwa.html" class="card">
+  <a href="zyuwa.html" class="card">
     <img src="zyuwa1.jpg" class="icon">
     <div class="text">
       <h3>ジュワ―ラ</h3>
       <p>ショーの元仕事仲間</p>
     </div>
-  </a> 
+  </a>
 
-<a href="cry.html" class="card">
+  <a href="cry.html" class="card">
     <img src="cry1.jpg" class="icon">
     <div class="text">
       <h3>クライ</h3>
       <p>ショーの想い人</p>
     </div>
-  </a> 
+  </a>
 
   <a href="selu.html" class="card">
     <img src="selu1.jpg" class="icon">
@@ -146,15 +144,15 @@ body {
       <h3>シェル</h3>
       <p>ショーの弟</p>
     </div>
-  </a> 
+  </a>
 
   <a href="diru.html" class="card">
     <img src="diru1.jpg" class="icon">
     <div class="text">
-      <h3></h3>ヂル</h3>
+      <h3>ヂル</h3>
       <p>ヂェミスの兄</p>
     </div>
-  </a> 
+  </a>
 
   <a href="diraika.html" class="card">
     <img src="diraika1.jpg" class="icon">
@@ -162,8 +160,8 @@ body {
       <h3>ヂェライカ</h3>
       <p>ヂェミスの姉</p>
     </div>
-  </a> 
-  
+  </a>
+
 </div>
 
 <h2>天晴れ！学校征服定例会議！</h2>
@@ -178,7 +176,7 @@ body {
   </a>
 
 </div>
-  
+
 <h2>サントゥテラ創作</h2>
 <div class="card-list">
 
@@ -204,6 +202,7 @@ body {
   </a>
 
 </div>
-  
+
+</div>
 </body>
 </html>
