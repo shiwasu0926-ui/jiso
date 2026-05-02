@@ -21,14 +21,18 @@ body {
   padding: 20px;
 }
 
+
 .card-list {
   display: flex;
-  flex-direction: column;
-  gap: 10px;
+  flex-wrap: wrap;   
+  gap: 12px;
   margin-bottom: 30px;
 }
 
+
 .card {
+  width: calc(50% - 6px); 
+  
   display: flex;
   align-items: center;
   gap: 12px;
@@ -74,19 +78,14 @@ body {
   }
 
   .text h3 {
-    font-size: 15px;
+    font-size: 14px;
   }
 
   .text p {
     font-size: 12px;
   }
 }
-
-  
 </style>
-
-
-  
 </head>
 
 <body>
@@ -109,8 +108,17 @@ body {
     </div>
   </a>
 
+  <a href="emi.html" class="card">
+    <img src="Syou.jpg" class="icon">
+    <div class="text">
+      <h3>エミール</h3>
+      <p>ショーの弟子</p>
+    </div>
+  </a> 
+
 </div>
- <h2>天晴れ！学校征服定例会議！</h2>
+
+<h2>天晴れ！学校征服定例会議！</h2>
 <div class="card-list">
 
   <a href="hrn.html" class="card">
