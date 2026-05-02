@@ -8,63 +8,198 @@
 <meta name="robots" content="noindex, nofollow">
 
 <style>
+  
 body {
   margin: 0;
-  font-family: sans-serif;
+  font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
   background: #f0f0f0;
+  color: #222;
 }
-
+  
 .container {
   max-width: 900px;
   margin: auto;
   background: white;
+  padding: 30px;
+  overflow-x: hidden; 
+}
+
+h1 {
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 8px;
+}
+
+h2 {
+  margin: 10px 0 15px;
+  font-weight: normal;
+  color: #555;
+}
+
+p {
+  line-height: 1.8;
+  margin-bottom: 14px;
+}
+
+
+.gallery {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 10px 0;
+}
+
+.gallery img {
+  flex: 0 0 70%;
+  max-width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  scroll-snap-align: center;
+  cursor: pointer;
+}
+
+
+.gallery::-webkit-scrollbar {
+  display: none;
+}
+
+
+#modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+#modal img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+}
+
+.box {
+  border: 1px solid #e5e5e5;
   padding: 20px;
+  margin-top: 30px;
+  background: #fafafa;
+  border-radius: 8px;
 }
 
-  .box {
-  border: 1px solid #ccc;
-  padding: 15px;
-  margin-top: 20px;
+.box p {
+  margin-bottom: 18px;
 }
 
+a {
+  color: blue;
+}
+
+.profile {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px 20px;
+}
+
+.profile p {
+  margin: 0;
+  padding: 6px 0;
+  border-bottom: 1px solid #eee;
+}
+
+@media (min-width: 768px) {
+  .profile {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px 40px;
+  }
+}
 </style>
 </head>
 
 <body>
 <div class="container">
+
   <a href="index.html">トップ</a> ＞
+  <a href="work.html">創作一覧</a> ＞
   <a href="world3.html">サントゥテラ創作</a>
 
- <p> <h1>ラル・カレード</h1></p>
-  <h2>「サンプル台詞」</h2>
+  <h1>ラル・カレード</h1>
 
-<p>
-キャラ説明<br>
-</p>
+  <div class="gallery">
+    <img src="rr1.jpeg"onclick="openModal(this)">
+    <img src="rr2.jpeg"onclick="openModal(this)">
+    <img src="rr3.jpeg"onclick="openModal(this)">
+  </div>
+
+  <h2>「遊んでくれないなら、ボクの"お人形さん"になってもらおうね。」</h2>
+
+  <p>フルーフ第七冠。常に人形を抱えている。</p>
+
+  <div class="box"> <div class="profile"> 
+    <p>性別：男</p>
+    <p>年齢：9</p>
+    <p>身長：131.3</p>
+    <p>体重：31.2kg</p>
+    <p>一人称：ボク</p>
+    <p>二人称：（名前）おねぇちゃん、おにぃちゃん</p> 
+    <p>好きなもの：ドーナツ、フランおねえちゃん</p> 
+    <p>嫌いなもの：ピーマン、いじわるな人</p> 
+    <p>趣味：お人形遊び</p>
+    <p>特技：登り棒</p> 
+    <p>苦手：一人で寝ること</p>
+    <p>誕生日：10月15日</p> 
+    <p>血液型：B型</p>
+    <p>利き手：両手</p> 
+    <p>役職：フルーフ第七冠</p>  
+    <p>出身地：アマデヤ</p>
+   <p>武器：糸</p>
+<p style="grid-column: 1 / -1; margin-top: 1em;">カリス：<strong>『絲』</strong></p> 
+ <p style="grid-column: 1 / -1;"> …無数の糸を自在に生み出し操ることが可能。糸の強度も自由自在。</p> 
+  </div> </div>
+  <h2 style="margin-top:50px;">関係キャラクター</h2>
   
-<div class="box">
-<p>身長…　cm   体重…  kg</p>
-<p>好きなもの…　　嫌いなもの…</p>
-<p>趣味… 武器…</p>
-<p>カリス…</p>
-</div><br>
-  <h2>関係キャラクター</h2>
+  <div class="box">
+    <a href="hrn"><strong>フラン</strong></a><br>
+   疑似家族。<br>
+    <em>「優しいおねぇちゃんなんだよ。ボクのお洋服もお名前も、全部フランおねぇちゃんがくれたんだよ。」</em>
+  </div>
 
-<div class="box">
+   <div class="box">
+    <a href="s"><strong>シャディ</strong></a><br>
+   不仲。<br>
+    <em>「いつもカリカリしてるね。意地悪ですぱるたでもあるね。」</em>
+  </div>
 
-  <p>
-    <a href="hrn.html"><strong>フラン</strong></a><br>
-    幼馴染。<br>
-    <em>「昔から変わらないやつだな」</em>
-  </p>
-
-  <p>
-    <a href="sitera.html"><strong>シテラ</strong></a><br>
-    ライバル。<br>
-    <em>「次は負けない」</em>
-  </p>
+   <div class="box">
+    <a href="sitera"><strong>シテラ</strong></a><br>
+   ？？？<br>
+    <em>「なんでも教えてくれたね。ボクのお仕事も色々教えてくれるんだよ。」</em>
+  </div>
+  
 </div>
- </div>
-  
+  <div id="modal" onclick="closeModal()">
+  <img id="modalImg">
+</div>
+
+<script>
+function openModal(img) {
+  const modal = document.getElementById("modal");
+  const modalImg = document.getElementById("modalImg");
+
+  modal.style.display = "flex";
+  modalImg.src = img.src;
+}
+
+function closeModal() {
+  document.getElementById("modal").style.display = "none";
+}
+</script>
+
 </body>
 </html>
