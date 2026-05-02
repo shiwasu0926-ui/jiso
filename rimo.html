@@ -8,63 +8,186 @@
 <meta name="robots" content="noindex, nofollow">
 
 <style>
+  
 body {
   margin: 0;
-  font-family: sans-serif;
+  font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
   background: #f0f0f0;
+  color: #222;
 }
-
+  
 .container {
   max-width: 900px;
   margin: auto;
   background: white;
+  padding: 30px;
+  overflow-x: hidden; 
+}
+
+h1 {
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 8px;
+}
+
+h2 {
+  margin: 10px 0 15px;
+  font-weight: normal;
+  color: #555;
+}
+
+p {
+  line-height: 1.8;
+  margin-bottom: 14px;
+}
+
+
+.gallery {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 10px 0;
+}
+
+.gallery img {
+  flex: 0 0 70%;
+  max-width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  scroll-snap-align: center;
+  cursor: pointer;
+}
+
+
+.gallery::-webkit-scrollbar {
+  display: none;
+}
+
+
+#modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+#modal img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+}
+
+.box {
+  border: 1px solid #e5e5e5;
   padding: 20px;
+  margin-top: 30px;
+  background: #fafafa;
+  border-radius: 8px;
 }
 
-  .box {
-  border: 1px solid #ccc;
-  padding: 15px;
-  margin-top: 20px;
+.box p {
+  margin-bottom: 18px;
 }
 
+a {
+  color: blue;
+}
+
+.profile {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px 20px;
+}
+
+.profile p {
+  margin: 0;
+  padding: 6px 0;
+  border-bottom: 1px solid #eee;
+}
+
+@media (min-width: 768px) {
+  .profile {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px 40px;
+  }
+}
 </style>
 </head>
 
 <body>
 <div class="container">
+
   <a href="index.html">トップ</a> ＞
+  <a href="work.html">創作一覧</a> ＞
   <a href="world3.html">サントゥテラ創作</a>
 
- <p> <h1>リモーレ・ヴェンデ</h1></p>
-  <h2>「サンプル台詞」</h2>
+  <h1>リモーレ・ヴェンデ</h1>
 
-<p>
-キャラ説明<br>
-</p>
+  <div class="gallery">
+    <img src="rimo1.jpeg"onclick="openModal(this)">
+    <img src="rimo2.jpeg"onclick="openModal(this)">
+    <img src="rimo3.jpeg"onclick="openModal(this)">
+  </div>
+
+  <h2>「僕は君の歳も、癖も、弱点もなんだって知ってるんだよ。…それでもまだ自分が優位に立ててると思うのかな？」</h2>
+
+  <p>フルーフ第四冠。とある人物に強い憎悪を抱いている。</p>
+
+  <div class="box"> <div class="profile"> 
+    <p>性別：男</p>
+    <p>年齢：28（見た目は17）</p>
+    <p>身長：162.4</p>
+    <p>体重：54.4kg</p>
+    <p>一人称：僕</p>
+    <p>二人称：君</p> 
+    <p>好きなもの：ミネストローネ、天気のいい日</p> 
+    <p>嫌いなもの：氷水、強風</p> 
+    <p>趣味：静かな場所で過ごすこと</p>
+    <p>特技：相手の癖を見抜くこと</p> 
+    <p>苦手：過度な運動</p>
+    <p>誕生日：3月2日</p> 
+    <p>血液型：AB型</p>
+    <p>利き手：左</p> 
+    <p>役職：フルーフ第四冠</p>  
+    <p>出身地：イコリティニ</p>
+   <p>武器：手榴弾</p>
+<p style="grid-column: 1 / -1; margin-top: 1em;">カリス：<strong>『モニター』</strong></p> 
+ <p style="grid-column: 1 / -1;"> …あらゆる生物、映像記録媒体と視覚を共有することが可能。他にも高性能カメラに似た力を一通り持ち合わせている。</p> 
+  </div> </div>
+  <h2 style="margin-top:50px;">関係キャラクター</h2>
   
-<div class="box">
-<p>身長…　cm   体重…  kg</p>
-<p>好きなもの…　　嫌いなもの…</p>
-<p>趣味… 武器…</p>
-<p>カリス…</p>
-</div><br>
-  <h2>関係キャラクター</h2>
-
-<div class="box">
-
-  <p>
-    <a href="char2.html"><strong>キャラ②</strong></a><br>
-    幼馴染。<br>
-    <em>「昔から変わらないやつだな」</em>
-  </p>
-
-  <p>
-    <a href="char3.html"><strong>キャラ③</strong></a><br>
-    ライバル。<br>
-    <em>「次は負けない」</em>
-  </p>
+  <div class="box">
+    <a href="zeru"><strong>ゼルディア</strong></a><br>
+   義兄弟。<br>
+    <em>「…ゼルディアは…簡単に言えば僕の全てだよ。あの人が命じるなら僕は死んだって構わない。」</em>
+  </div>
+  
 </div>
- </div>
-  
+  <div id="modal" onclick="closeModal()">
+  <img id="modalImg">
+</div>
+
+<script>
+function openModal(img) {
+  const modal = document.getElementById("modal");
+  const modalImg = document.getElementById("modalImg");
+
+  modal.style.display = "flex";
+  modalImg.src = img.src;
+}
+
+function closeModal() {
+  document.getElementById("modal").style.display = "none";
+}
+</script>
+
 </body>
 </html>
