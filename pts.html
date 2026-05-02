@@ -8,63 +8,192 @@
 <meta name="robots" content="noindex, nofollow">
 
 <style>
+  
 body {
   margin: 0;
-  font-family: sans-serif;
+  font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
   background: #f0f0f0;
+  color: #222;
 }
-
+  
 .container {
   max-width: 900px;
   margin: auto;
   background: white;
+  padding: 30px;
+  overflow-x: hidden; 
+}
+
+h1 {
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 8px;
+}
+
+h2 {
+  margin: 10px 0 15px;
+  font-weight: normal;
+  color: #555;
+}
+
+p {
+  line-height: 1.8;
+  margin-bottom: 14px;
+}
+
+
+.gallery {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 10px 0;
+}
+
+.gallery img {
+  flex: 0 0 70%;
+  max-width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  scroll-snap-align: center;
+  cursor: pointer;
+}
+
+
+.gallery::-webkit-scrollbar {
+  display: none;
+}
+
+
+#modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+#modal img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+}
+
+.box {
+  border: 1px solid #e5e5e5;
   padding: 20px;
+  margin-top: 30px;
+  background: #fafafa;
+  border-radius: 8px;
 }
 
-  .box {
-  border: 1px solid #ccc;
-  padding: 15px;
-  margin-top: 20px;
+.box p {
+  margin-bottom: 18px;
 }
 
+a {
+  color: blue;
+}
+
+.profile {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px 20px;
+}
+
+.profile p {
+  margin: 0;
+  padding: 6px 0;
+  border-bottom: 1px solid #eee;
+}
+
+@media (min-width: 768px) {
+  .profile {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px 40px;
+  }
+}
 </style>
 </head>
 
 <body>
 <div class="container">
+
   <a href="index.html">トップ</a> ＞
+  <a href="work.html">創作一覧</a> ＞
   <a href="world3.html">サントゥテラ創作</a>
 
- <p> <h1>パトシー・アンゲルス</h1></p>
-  <h2>「サンプル台詞」</h2>
+  <h1>パトシー・アンゲルス</h1>
 
-<p>
-キャラ説明<br>
-</p>
+  <div class="gallery">
+    <img src="pts1.jpeg"onclick="openModal(this)">
+    <img src="pts2.jpeg"onclick="openModal(this)">
+    <img src="pts3.jpeg"onclick="openModal(this)">
+  </div>
+
+  <h2>「わたしは神でも天使でもない✨故にそのお祈りに意味などありませんよ？✨ふふ✨」</h2>
+
+  <p>フルーフ第九冠。盲目で常にどこか掴めない雰囲気を纏う。</p>
+
+  <div class="box"> <div class="profile"> 
+    <p>性別：不明</p>
+    <p>年齢：100前後（見た目は16）</p>
+    <p>身長：146.4</p>
+    <p>体重：45.4kg</p>
+    <p>一人称：わたし</p>
+    <p>二人称：あなた様、（役職）様</p> 
+    <p>好きなもの：スミレの砂糖漬け、開放的な空間</p> 
+    <p>嫌いなもの：手の汚れるもの、背もたれのある椅子</p> 
+    <p>趣味：テラリウム</p>
+    <p>特技：動物との会話</p> 
+    <p>苦手：飛行</p>
+    <p>誕生日：10月4日（フランたちが決めた）</p> 
+    <p>血液型：トパーズ型</p>
+    <p>利き手：右</p> 
+    <p>役職：フルーフ第九冠</p>  
+    <p>出身地：フォルチュナス</p>
+   <p>武器：矢、周囲の物</p>
+<p style="grid-column: 1 / -1; margin-top: 1em;">カリス：<strong>『プノイ・アンゲル―』</strong></p> 
+ <p style="grid-column: 1 / -1;"> …拍手を合図に周囲の物に意思を宿らせ支配下に置くことが可能。意思の宿ったものは自由に動くことができる。</p> 
+  </div> </div>
+  <h2 style="margin-top:50px;">関係キャラクター</h2>
   
-<div class="box">
-<p>身長…　cm   体重…  kg</p>
-<p>好きなもの…　　嫌いなもの…</p>
-<p>趣味… 武器…</p>
-<p>カリス…</p>
-</div><br>
-  <h2>関係キャラクター</h2>
+  <div class="box">
+    <a href="rt"><strong>リツィ</strong></a><br>
+   組織への勧誘。<br>
+    <em>「そうですね…✨教祖様は意志が強くしっかりとした方ですので、傍にいても楽しいのです✨」</em>
+  </div>
 
-<div class="box">
-
-  <p>
-    <a href="char2.html"><strong>キャラ②</strong></a><br>
-    幼馴染。<br>
-    <em>「昔から変わらないやつだな」</em>
-  </p>
-
-  <p>
-    <a href="char3.html"><strong>キャラ③</strong></a><br>
-    ライバル。<br>
-    <em>「次は負けない」</em>
-  </p>
+   <div class="box">
+    <a href="r"><strong>エルン</strong></a><br>
+ かつて生み出した失敗作。<br>
+  <em>「やはり自由を与えすぎてはダメなのですね、物は✨生み出してしまいお恥ずかしい限りです✨」</em>
+  </div>
+  
 </div>
- </div>
-  
+  <div id="modal" onclick="closeModal()">
+  <img id="modalImg">
+</div>
+
+<script>
+function openModal(img) {
+  const modal = document.getElementById("modal");
+  const modalImg = document.getElementById("modalImg");
+
+  modal.style.display = "flex";
+  modalImg.src = img.src;
+}
+
+function closeModal() {
+  document.getElementById("modal").style.display = "none";
+}
+</script>
+
 </body>
 </html>
