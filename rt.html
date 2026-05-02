@@ -8,63 +8,192 @@
 <meta name="robots" content="noindex, nofollow">
 
 <style>
+  
 body {
   margin: 0;
-  font-family: sans-serif;
+  font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
   background: #f0f0f0;
+  color: #222;
 }
-
+  
 .container {
   max-width: 900px;
   margin: auto;
   background: white;
+  padding: 30px;
+  overflow-x: hidden; 
+}
+
+h1 {
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 8px;
+}
+
+h2 {
+  margin: 10px 0 15px;
+  font-weight: normal;
+  color: #555;
+}
+
+p {
+  line-height: 1.8;
+  margin-bottom: 14px;
+}
+
+
+.gallery {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 10px 0;
+}
+
+.gallery img {
+  flex: 0 0 70%;
+  max-width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  scroll-snap-align: center;
+  cursor: pointer;
+}
+
+
+.gallery::-webkit-scrollbar {
+  display: none;
+}
+
+
+#modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+#modal img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+}
+
+.box {
+  border: 1px solid #e5e5e5;
   padding: 20px;
+  margin-top: 30px;
+  background: #fafafa;
+  border-radius: 8px;
 }
 
-  .box {
-  border: 1px solid #ccc;
-  padding: 15px;
-  margin-top: 20px;
+.box p {
+  margin-bottom: 18px;
 }
 
+a {
+  color: blue;
+}
+
+.profile {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px 20px;
+}
+
+.profile p {
+  margin: 0;
+  padding: 6px 0;
+  border-bottom: 1px solid #eee;
+}
+
+@media (min-width: 768px) {
+  .profile {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px 40px;
+  }
+}
 </style>
 </head>
 
 <body>
 <div class="container">
+
   <a href="index.html">トップ</a> ＞
+  <a href="work.html">創作一覧</a> ＞
   <a href="world3.html">サントゥテラ創作</a>
 
- <p> <h1リツィ・ミエリータ</h1></p>
-  <h2>「サンプル台詞」</h2>
+  <h1>リツィ・ミエリータ</h1>
 
-<p>
-キャラ説明<br>
-</p>
+  <div class="gallery">
+    <img src="rt1.jpeg"onclick="openModal(this)">
+    <img src="rt2.jpeg"onclick="openModal(this)">
+    <img src="rt3.jpeg"onclick="openModal(this)">
+  </div>
+
+  <h2>「神が存在するなら貴方もアタシもここにいるわけないでしょう？…お馬鹿さん」</h2>
+
+  <p>フルーフ第八冠。目を惹く美貌の持ち主で人々を惑わす。</p>
+
+  <div class="box"> <div class="profile"> 
+    <p>性別：女</p>
+    <p>年齢：27</p>
+    <p>身長：173.5</p>
+    <p>体重：56.1kg</p>
+    <p>一人称：アタシ</p>
+    <p>二人称：アンタ、貴方、名前呼び捨て</p> 
+    <p>好きなもの：ヒレステーキ、聞き分けのいい人間</p> 
+    <p>嫌いなもの：ミント、見る目のない男</p> 
+    <p>趣味：ビューティーケア</p>
+    <p>特技：人の声の記憶</p> 
+    <p>苦手：慈善活動</p>
+    <p>誕生日：7月29日</p> 
+    <p>血液型：B型</p>
+    <p>利き手：左</p> 
+    <p>役職：フルーフ第八冠</p>  
+    <p>出身地：ペトル</p>
+   <p>武器：杭</p>
+<p style="grid-column: 1 / -1; margin-top: 1em;">カリス：<strong>『チャーヴィル』</strong></p> 
+ <p style="grid-column: 1 / -1;"> …他者を洗脳することが可能。洗脳されたものは彼女のことを主と認識するとともに強制的に愛情を抱く。</p> 
+  </div> </div>
+  <h2 style="margin-top:50px;">関係キャラクター</h2>
   
-<div class="box">
-<p>身長…　cm   体重…  kg</p>
-<p>好きなもの…　　嫌いなもの…</p>
-<p>趣味… 武器…</p>
-<p>カリス…</p>
-</div><br>
-  <h2>関係キャラクター</h2>
+  <div class="box">
+    <a href="pts"><strong>パトシー</strong></a><br>
+   組織への勧誘。<br>
+    <em>「何考えてるのか分かりやしないわ。アタシを組織に入れた時もいつ話してもパッとしたこと言わないんだもの。」</em>
+  </div>
 
-<div class="box">
-
-  <p>
-    <a href="char2.html"><strong>キャラ②</strong></a><br>
-    幼馴染。<br>
-    <em>「昔から変わらないやつだな」</em>
-  </p>
-
-  <p>
-    <a href="char3.html"><strong>キャラ③</strong></a><br>
-    ライバル。<br>
-    <em>「次は負けない」</em>
-  </p>
+   <div class="box">
+    <a href="hrn"><strong>フラン</strong></a><br>
+   お茶会仲間。<br>
+    <em>「仲間なんて聞こえ良い関係じゃないわよ。…拒んだら何をされるか分からないんだもの。」</em>
+  </div>
+  
 </div>
- </div>
-  
+  <div id="modal" onclick="closeModal()">
+  <img id="modalImg">
+</div>
+
+<script>
+function openModal(img) {
+  const modal = document.getElementById("modal");
+  const modalImg = document.getElementById("modalImg");
+
+  modal.style.display = "flex";
+  modalImg.src = img.src;
+}
+
+function closeModal() {
+  document.getElementById("modal").style.display = "none";
+}
+</script>
+
 </body>
 </html>
