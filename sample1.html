@@ -1,1 +1,219 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>にーにと呼んでほしい。</title>
+
+<style>
+body {
+  margin: 0;
+  background: #f0f0f0;
+  font-family: sans-serif;
+  color: #222;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  background: white;
+  padding: 20px;
+}
+
+
+h1 {
+  margin-top: 0;
+  margin-bottom: 25px;
+
+  font-size: 30px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+}
+
+
+
+.character-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  text-decoration: none;
+  color: inherit;
+
+  background: #f7f7f7;
+  border-radius: 14px;
+
+  padding: 14px;
+  margin-bottom: 30px;
+
+  transition: 0.2s;
+}
+
+.character-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.character-icon {
+  width: 70px;
+  height: 70px;
+
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.character-info h2 {
+  margin: 0 0 5px;
+  font-size: 20px;
+}
+
+.character-info p {
+  margin: 0;
+  color: #666;
+  line-height: 1.6;
+}
+
+
+
+.chat-area {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+
+
+.message-left {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.message-left .icon {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.message-left .bubble {
+  background: #e8f3ff;
+  padding: 14px 16px;
+  border-radius: 16px;
+
+  max-width: 75%;
+  line-height: 1.8;
+}
+
+
+
+.message-right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.message-right .icon {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.message-right .bubble {
+  background: #ffeef2;
+  padding: 14px 16px;
+  border-radius: 16px;
+
+  max-width: 75%;
+  line-height: 1.8;
+}
+
+
+
+@media (max-width: 600px) {
+
+  .character-card {
+    align-items: flex-start;
+  }
+
+  .message-left .bubble,
+  .message-right .bubble {
+    max-width: 68%;
+  }
+
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <a href="blog.html">SS一覧</a>
+
+  <h1>にーにと呼んでほしい。</h1>
+
+  <!-- 登場キャラ -->
+
+  <a href="char1.html" class="character-card">
+
+    <img src="char1.png" class="character-icon">
+
+    <div class="character-info">
+      <h2>ショー</h2>
+      <p>
+        今回の被害者。弟からの呼ばれ方にこだわりはない。<br>
+      </p>
+    </div>
+
+  </a>
+
+  <a href="diru.html" class="character-card">
+
+    <img src="diru1.jpg" class="character-icon">
+
+    <div class="character-info">
+      <h2>ヂル</h2>
+      <p>
+       最近「にーに」というとヂェミスに申し訳なさそうな顔をされるようになった。<br>
+      </p>
+    </div>
+
+  </a>
+
+  <!-- 会話 -->
+
+  <div class="chat-area">
+
+    <div class="message-left">
+      <img src="diru1.jpg" class="icon">
+
+      <div class="bubble">
+        という訳でして。<br>
+        一度で構いませんので「にーに」と呼んでいただきたい所存で御座います。
+      </div>
+    </div>
+
+    <div class="message-right">
+
+      <div class="bubble">
+        オレを置いていくな。<br>
+      </div>
+
+      <img src="char1.png1" class="icon">
+
+    </div>
+
+
+  </div>
+
+</div>
+</body>
+</html>
 
