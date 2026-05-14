@@ -21,7 +21,6 @@ body {
   padding: 20px;
 }
 
-
 h1 {
   margin-top: 0;
   margin-bottom: 25px;
@@ -33,57 +32,58 @@ h1 {
 
 
 
-.character-card {
+/* 登場キャラ */
+
+.character-box {
   display: flex;
-  align-items: center;
+  flex-direction: column;
   gap: 14px;
 
-  text-decoration: none;
-  color: inherit;
-
-  background: #f7f7f7;
-  border-radius: 14px;
-
-  padding: 14px;
-  margin-bottom: 30px;
-
-  transition: 0.2s;
+  margin-bottom: 35px;
 }
 
-.character-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+.character-mini {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  background: #f7f7f7;
+  padding: 12px 14px;
+  border-radius: 12px;
 }
 
 .character-icon {
-  width: 70px;
-  height: 70px;
+  width: 60px;
+  height: 60px;
 
   border-radius: 50%;
   object-fit: cover;
   flex-shrink: 0;
 }
 
-.character-info h2 {
-  margin: 0 0 5px;
-  font-size: 20px;
+.character-text {
+  line-height: 1.7;
 }
 
-.character-info p {
-  margin: 0;
-  color: #666;
-  line-height: 1.6;
+.character-text a {
+  color: #222;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.character-text a:hover {
+  text-decoration: underline;
 }
 
 
+
+/* 会話 */
 
 .chat-area {
   display: flex;
   flex-direction: column;
   gap: 18px;
 }
-
-
 
 .message-left {
   display: flex;
@@ -107,8 +107,6 @@ h1 {
   max-width: 75%;
   line-height: 1.8;
 }
-
-
 
 .message-right {
   display: flex;
@@ -134,13 +132,7 @@ h1 {
   line-height: 1.8;
 }
 
-
-
 @media (max-width: 600px) {
-
-  .character-card {
-    align-items: flex-start;
-  }
 
   .message-left .bubble,
   .message-right .bubble {
@@ -159,45 +151,47 @@ h1 {
 
   <h1>にーにと呼んでほしい。</h1>
 
-  <!-- 登場キャラ -->
+  <!-- 登場キャラクター -->
 
-  <a href="char1.html" class="character-card">
+  <div class="character-box">
 
-    <img src="char1.png" class="character-icon">
+    <div class="character-mini">
 
-    <div class="character-info">
-      <h2>ショー</h2>
-      <p>
-        今回の被害者。弟からの呼ばれ方にこだわりはない。<br>
-      </p>
+      <img src="char1.png" class="character-icon">
+
+      <div class="character-text">
+        <a href="char1.html"><strong>ショー</strong></a><br>
+        今回の被害者。弟からの呼ばれ方にこだわりはない。
+      </div>
+
     </div>
 
-  </a>
+    <div class="character-mini">
 
-  <a href="diru.html" class="character-card">
+      <img src="diru1.jpg" class="character-icon">
 
-    <img src="diru1.jpg" class="character-icon">
+      <div class="character-text">
+        <a href="diru.html"><strong>ヂル</strong></a><br>
+        最近「にーに」というとヂェミスに申し訳なさそうな顔をされるようになった。
+      </div>
 
-    <div class="character-info">
-      <h2>ヂル</h2>
-      <p>
-       最近「にーに」というとヂェミスに申し訳なさそうな顔をされるようになった。<br>
-      </p>
     </div>
 
-  </a>
+  </div>
 
   <!-- 会話 -->
 
   <div class="chat-area">
 
     <div class="message-left">
+
       <img src="diru1.jpg" class="icon">
 
       <div class="bubble">
         という訳でして。<br>
         一度で構いませんので「にーに」と呼んでいただきたい所存で御座います。
       </div>
+
     </div>
 
     <div class="message-right">
@@ -210,10 +204,8 @@ h1 {
 
     </div>
 
-
   </div>
 
 </div>
 </body>
 </html>
-
