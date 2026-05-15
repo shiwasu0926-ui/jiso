@@ -1,14 +1,15 @@
-```html
 <!DOCTYPE html>
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>キャラクター</title>
 
 <meta name="robots" content="noindex, nofollow">
 
 <style>
+
 body {
   margin: 0;
   font-family: sans-serif;
@@ -23,11 +24,13 @@ body {
 }
 
 /* 検索欄 */
+
 .search-box {
   margin: 20px 0 30px;
 }
 
 #searchInput {
+
   width: 100%;
   box-sizing: border-box;
 
@@ -36,22 +39,31 @@ body {
 
   border: 1px solid #ccc;
   border-radius: 10px;
+
 }
 
 /* タイトル */
+
 .section-title {
   margin-top: 40px;
 }
 
-/* 常に2列 */
+/* カード一覧 */
+
 .card-list {
+
   display: grid;
   grid-template-columns: 1fr 1fr;
+
   gap: 12px;
   margin-bottom: 30px;
+
 }
 
+/* カード */
+
 .card {
+
   display: flex;
   align-items: center;
   gap: 12px;
@@ -61,23 +73,34 @@ body {
 
   background: #f5f5f5;
   border-radius: 12px;
+
   padding: 12px;
 
   transition: 0.2s;
+
 }
 
 .card:hover {
+
   transform: translateY(-2px);
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+
 }
 
+/* アイコン */
+
 .icon {
+
   width: 50px;
   height: 50px;
+
   border-radius: 50%;
-  flex-shrink: 0;
   object-fit: cover;
+  flex-shrink: 0;
+
 }
+
+/* テキスト */
 
 .text h3 {
   margin: 0;
@@ -85,18 +108,22 @@ body {
 }
 
 .text p {
+
   margin: 4px 0 0;
   font-size: 13px;
   color: #555;
+
 }
 
-/* 検索ヒット時 */
+/* 検索ヒット */
+
 .highlight {
   outline: 3px solid #87cefa;
   border-radius: 12px;
 }
 
 /* スマホ */
+
 @media (max-width: 480px) {
 
   .icon {
@@ -113,6 +140,7 @@ body {
   }
 
 }
+
 </style>
 </head>
 
@@ -120,331 +148,520 @@ body {
 
 <div class="container">
 
-  <a href="index.html">トップへ</a> ＞
+<a href="index.html">トップへ</a> ＞
 
-  <h1>キャラクター一覧</h1>
+<h1>キャラクター一覧</h1>
 
-  <p>自創作キャラクターいっきみ用</p>
+<p>
+自創作キャラクターいっきみ用
+</p>
 
-  <!-- 検索欄 -->
-  <div class="search-box">
-    <input type="text" id="searchInput"
-    placeholder="キャラ名・作品名で検索">
-  </div>
+<!-- 検索欄 -->
+
+<div class="search-box">
+
+<input
+type="text"
+id="searchInput"
+placeholder="キャラ名・作品名・タグで検索">
+
+</div>
 
 <hr>
 
-<h2 class="section-title">エンドロールは笑顔とともに</h2>
+<!-- =========================================
+エンドロール
+========================================= -->
+
+<h2 class="section-title">
+エンドロールは笑顔とともに
+</h2>
 
 <div class="card-list">
 
 <a href="char1.html"
 class="card"
 data-name="ショー ラジェック"
-data-tag="マジシャン 兄 お兄ちゃん ツンデレ 男">
-    <img src="char1.png" class="icon">
-    <div class="text">
-      <h3>ショー</h3>
-      <p>元プロマジシャン。</p>
-    </div>
-  </a>
+data-tag="マジシャン 男 兄">
+
+<img src="char1.png" class="icon">
+
+<div class="text">
+<h3>ショー</h3>
+<p>元プロマジシャン。</p>
+</div>
+
+</a>
 
 <a href="emi.html"
 class="card"
 data-name="エミール ロレットルト"
 data-tag="マジシャン 女">
-    <img src="emi1.jpg" class="icon">
-    <div class="text">
-      <h3>エミール</h3>
-      <p>マジシャンの少女</p>
-    </div>
-  </a>
 
- <a href="demi.html"
+<img src="emi1.jpg" class="icon">
+
+<div class="text">
+<h3>エミール</h3>
+<p>マジシャンの少女</p>
+</div>
+
+</a>
+
+<a href="demi.html"
 class="card"
 data-name="ヂェミス リース"
-data-tag="マジシャン 弟 男 ">
-    <img src="demi1.jpg" class="icon">
-    <div class="text">
-      <h3>ヂェミス</h3>
-      <p>マジシャンの青年</p>
-    </div>
-  </a>
+data-tag="マジシャン 男 弟">
 
-  <a href="zyuwa.html"
+<img src="demi1.jpg" class="icon">
+
+<div class="text">
+<h3>ヂェミス</h3>
+<p>マジシャンの青年</p>
+</div>
+
+</a>
+
+<a href="zyuwa.html"
 class="card"
-data-name="ジュワ―ラ ミデラ"
-data-tag="マジシャン 男 ">
-    <img src="zyuwa1.jpg" class="icon">
-    <div class="text">
-      <h3>ジュワ―ラ</h3>
-      <p>ショーの元仕事仲間</p>
-    </div>
-  </a>
+data-name="ジュワーラ ミデラ"
+data-tag="マジシャン 男">
 
- <a href="cry.html"
+<img src="zyuwa1.jpg" class="icon">
+
+<div class="text">
+<h3>ジュワ―ラ</h3>
+<p>ショーの元仕事仲間</p>
+</div>
+
+</a>
+
+<a href="cry.html"
 class="card"
 data-name="クライ ルジェント"
 data-tag="女">
-    <img src="cry1.jpg" class="icon">
-    <div class="text">
-      <h3>クライ</h3>
-      <p>ショーの想い人</p>
-    </div>
-  </a>
 
-  <a href="selu.html"
+<img src="cry1.jpg" class="icon">
+
+<div class="text">
+<h3>クライ</h3>
+<p>ショーの想い人</p>
+</div>
+
+</a>
+
+<a href="selu.html"
 class="card"
 data-name="シェル ラジェック"
-data-tag="弟 男">
-    <img src="selu1.jpg" class="icon">
-    <div class="text">
-      <h3>シェル</h3>
-      <p>ショーの弟</p>
-    </div>
-  </a>
+data-tag="男 弟">
+
+<img src="selu1.jpg" class="icon">
+
+<div class="text">
+<h3>シェル</h3>
+<p>ショーの弟</p>
+</div>
+
+</a>
 
 <a href="diru.html"
 class="card"
 data-name="ヂル リース"
-data-tag="兄 お兄ちゃん 男">
-    <img src="diru1.jpg" class="icon">
-    <div class="text">
-      <h3>ヂル</h3>
-      <p>ヂェミスの兄</p>
-    </div>
-  </a>
+data-tag="男 兄">
 
- <a href="diraika.html"
+<img src="diru1.jpg" class="icon">
+
+<div class="text">
+<h3>ヂル</h3>
+<p>ヂェミスの兄</p>
+</div>
+
+</a>
+
+<a href="diraika.html"
 class="card"
 data-name="ヂェライカ リース"
-data-tag="姉 妹 女">
-    <img src="diraika1.jpg" class="icon">
-    <div class="text">
-      <h3>ヂェライカ</h3>
-      <p>ヂェミスの姉</p>
-    </div>
-  </a>
+data-tag="女 姉">
+
+<img src="diraika1.jpg" class="icon">
+
+<div class="text">
+<h3>ヂェライカ</h3>
+<p>ヂェミスの姉</p>
+</div>
+
+</a>
 
 </div>
 
-<h2 class="section-title">天晴れ！学校征服定例会議！</h2>
+<!-- =========================================
+学校征服
+========================================= -->
+
+<h2 class="section-title">
+天晴れ！学校征服定例会議！
+</h2>
 
 <div class="card-list">
 
-  <a href="hareya.html"
+<a href="hareya.html"
 class="card"
 data-name="天國 晴哉 あまぐに はれや"
 data-tag="生徒会 男">
-    <img src="hareya1.jpeg" class="icon">
-    <div class="text">
-      <h3>天國晴哉</h3>
-      <p>生徒会長</p>
-    </div>
-  </a>
 
-  <a href="rei.html"
-  class="card"
+<img src="hareya1.jpeg" class="icon">
+
+<div class="text">
+<h3>天國晴哉</h3>
+<p>生徒会長</p>
+</div>
+
+</a>
+
+<a href="rei.html"
+class="card"
 data-name="杜若 怜 かきつばた れい"
 data-tag="生徒会 女">
-    <img src="rei1.jpeg" class="icon">
-    <div class="text">
-      <h3>杜若怜</h3>
-      <p>生徒会副会長</p>
-    </div>
-  </a>
 
-  <a href="kisaki.html" class="card"　data-name="鈴瑞ヶ咲 妃 すずがさき きさき"
+<img src="rei1.jpeg" class="icon">
+
+<div class="text">
+<h3>杜若怜</h3>
+<p>生徒会副会長</p>
+</div>
+
+</a>
+
+<a href="kisaki.html"
+class="card"
+data-name="鈴瑞ヶ咲 妃 すずがさき きさき"
 data-tag="生徒会 女">
-    <img src="kisaki1.jpeg" class="icon">
-    <div class="text">
-      <h3>鈴瑞ヶ咲妃</h3>
-      <p>生徒会長議長</p>
-    </div>
-  </a>
 
-  <a href="ruka.html" class="card"　data-name="泉 瑠夏 いずみ るか"
+<img src="kisaki1.jpeg" class="icon">
+
+<div class="text">
+<h3>鈴瑞ヶ咲妃</h3>
+<p>生徒会長議長</p>
+</div>
+
+</a>
+
+<a href="ruka.html"
+class="card"
+data-name="泉 瑠夏 いずみ るか"
 data-tag="生徒会 女">
-    <img src="ruka1.jpeg" class="icon">
-    <div class="text">
-      <h3>泉瑠夏</h3>
-      <p>生徒会副会長</p>
-    </div>
-  </a>
 
-  <a href="yuri.html" class="card"　data-name="三陰 由利 みかげ ゆり"
-data-tag="生徒会 男 弟">
-    <img src="yuri1.jpeg" class="icon">
-    <div class="text">
-      <h3>三陰由利</h3>
-      <p>生徒会書記</p>
-    </div>
-  </a>
+<img src="ruka1.jpeg" class="icon">
 
-  <a href="yuusei.html" class="card"　data-name="金蜜 優生 かねみつ ゆうせい"
+<div class="text">
+<h3>泉瑠夏</h3>
+<p>生徒会副会長</p>
+</div>
+
+</a>
+
+<a href="yuri.html"
+class="card"
+data-name="三陰 由利 みかげ ゆり"
 data-tag="生徒会 男">
-    <img src="yuusei1.jpeg" class="icon">
-    <div class="text">
-      <h3>金蜜優生</h3>
-      <p>生徒会会計</p>
-    </div>
-  </a>
 
-  <a href="sinn.html" class="card"　data-name="古江田 真 ふるえだ しん 演劇 兄">
-    <img src="sinn1.jpeg" class="icon">
-    <div class="text">
-      <h3>古江田真</h3>
-      <p>演劇部部長</p>
-    </div>
-  </a>
+<img src="yuri1.jpeg" class="icon">
 
-  <a href="mituru.html" class="card" data-name=靣 光琉 おもて みつる 演劇">
-    <img src="mituru1.jpeg" class="icon">
-    <div class="text">
-      <h3>靣光琉</h3>
-      <p>演劇部照明局</p>
-    </div>
-  </a>
+<div class="text">
+<h3>三陰由利</h3>
+<p>生徒会書記</p>
+</div>
 
-  <a href="neneka.html" class="card"　data-name=彩藤 寧々香 さいふじ ねねか 演劇">
-    <img src="neneka1.jpeg" class="icon">
-    <div class="text">
-      <h3>彩藤寧々香</h3>
-      <p>演劇部部員</p>
-    </div>
-  </a>
+</a>
 
-  <a href="hiaki.html" class="card"　data-name=泉 いずみ ひあき 兄 お兄ちゃん">
-    <img src="hiaki1.jpeg" class="icon">
-    <div class="text">
-      <h3>泉ひあき</h3>
-      <p>瑠夏の兄</p>
-    </div>
-  </a>
+<a href="yuusei.html"
+class="card"
+data-name="金蜜 優生 かねみつ ゆうせい"
+data-tag="生徒会 男">
+
+<img src="yuusei1.jpeg" class="icon">
+
+<div class="text">
+<h3>金蜜優生</h3>
+<p>生徒会会計</p>
+</div>
+
+</a>
+
+<a href="sinn.html"
+class="card"
+data-name="古江田 真 ふるえだ しん"
+data-tag="演劇 男 兄">
+
+<img src="sinn1.jpeg" class="icon">
+
+<div class="text">
+<h3>古江田真</h3>
+<p>演劇部部長</p>
+</div>
+
+</a>
+
+<a href="mituru.html"
+class="card"
+data-name="靣 光琉 おもて みつる"
+data-tag="演劇 男">
+
+<img src="mituru1.jpeg" class="icon">
+
+<div class="text">
+<h3>靣光琉</h3>
+<p>演劇部照明局</p>
+</div>
+
+</a>
+
+<a href="neneka.html"
+class="card"
+data-name="彩藤 寧々香 さいふじ ねねか"
+data-tag="演劇 女">
+
+<img src="neneka1.jpeg" class="icon">
+
+<div class="text">
+<h3>彩藤寧々香</h3>
+<p>演劇部部員</p>
+</div>
+
+</a>
+
+<a href="hiaki.html"
+class="card"
+data-name="泉 ひあき いずみ ひあき"
+data-tag="男 兄">
+
+<img src="hiaki1.jpeg" class="icon">
+
+<div class="text">
+<h3>泉ひあき</h3>
+<p>瑠夏の兄</p>
+</div>
+
+</a>
 
 </div>
 
-<h2 class="section-title">愛おしき貴方へ ラクリマを</h2>
+<!-- =========================================
+ラクリマ
+========================================= -->
+
+<h2 class="section-title">
+愛おしき貴方へ ラクリマを
+</h2>
 
 <div class="card-list">
 
-  <a href="sitera.html" class="card">
-    <img src="sitera1.png" class="icon">
-    <div class="text">
-      <h3>シテラ</h3>
-      <p>フルールトップ。身勝手で性悪</p>
-    </div>
-  </a>
+<a href="sitera.html"
+class="card"
+data-name="シテラ"
+data-tag="フルーフ 女">
 
-  <a href="zeru.html" class="card">
-    <img src="zeru.png" class="icon">
-    <div class="text">
-      <h3>ゼルディア</h3>
-      <p>フルーフ第三冠</p>
-    </div>
-  </a>
+<img src="sitera1.png" class="icon">
 
-  <a href="rimo.html" class="card">
-    <img src="rimo1.png" class="icon">
-    <div class="text">
-      <h3>リモーレ</h3>
-      <p>フルーフ第四冠</p>
-    </div>
-  </a>
+<div class="text">
+<h3>シテラ</h3>
+<p>フルールトップ。身勝手で性悪</p>
+</div>
 
-  <a href="hrn.html" class="card">
-    <img src="hrn1.png" class="icon">
-    <div class="text">
-      <h3>フラン</h3>
-      <p>フルーフ第五冠</p>
-    </div>
-  </a>
+</a>
 
-  <a href="s.html" class="card">
-    <img src="s1.jpeg" class="icon">
-    <div class="text">
-      <h3>シャディ</h3>
-      <p>フルーフ第六冠</p>
-    </div>
-  </a>
+<a href="zeru.html"
+class="card"
+data-name="ゼルディア"
+data-tag="フルーフ 男">
 
-  <a href="rr.html" class="card">
-    <img src="rr1.png" class="icon">
-    <div class="text">
-      <h3>ラル</h3>
-      <p>フルーフ第七冠</p>
-    </div>
-  </a>
+<img src="zeru.png" class="icon">
 
-  <a href="rt.html" class="card">
-    <img src="rt1.png" class="icon">
-    <div class="text">
-      <h3>リツィ</h3>
-      <p>フルーフ第八冠</p>
-    </div>
-  </a>
+<div class="text">
+<h3>ゼルディア</h3>
+<p>フルーフ第三冠</p>
+</div>
 
-  <a href="pts.html" class="card">
-    <img src="pts1.png" class="icon">
-    <div class="text">
-      <h3>パトシー</h3>
-      <p>フルーフ第九冠</p>
-    </div>
-  </a>
+</a>
 
-  <a href="m.html" class="card">
-    <img src="m1.png" class="icon">
-    <div class="text">
-      <h3>メァーナス</h3>
-      <p>レーヴン統治者</p>
-    </div>
-  </a>
+<a href="rimo.html"
+class="card"
+data-name="リモーレ"
+data-tag="フルーフ 女">
 
-  <a href="g.html" class="card">
-    <img src="g1.png" class="icon">
-    <div class="text">
-      <h3>ゴルド</h3>
-      <p>カジノディーラー</p>
-    </div>
-  </a>
+<img src="rimo1.png" class="icon">
 
-  <a href="r.html" class="card">
-    <img src="r1.jpeg" class="icon">
-    <div class="text">
-      <h3>リュミエル</h3>
-      <p>国一の大スター</p>
-    </div>
-  </a>
+<div class="text">
+<h3>リモーレ</h3>
+<p>フルーフ第四冠</p>
+</div>
 
-  <a href="t.html" class="card">
-    <img src="t1.png" class="icon">
-    <div class="text">
-      <h3>ツェル</h3>
-      <p>著名彫刻家</p>
-    </div>
-  </a>
+</a>
+
+<a href="hrn.html"
+class="card"
+data-name="フラン"
+data-tag="フルーフ 男">
+
+<img src="hrn1.png" class="icon">
+
+<div class="text">
+<h3>フラン</h3>
+<p>フルーフ第五冠</p>
+</div>
+
+</a>
+
+<a href="s.html"
+class="card"
+data-name="シャディ"
+data-tag="フルーフ 男">
+
+<img src="s1.jpeg" class="icon">
+
+<div class="text">
+<h3>シャディ</h3>
+<p>フルーフ第六冠</p>
+</div>
+
+</a>
+
+<a href="rr.html"
+class="card"
+data-name="ラル"
+data-tag="フルーフ 男">
+
+<img src="rr1.png" class="icon">
+
+<div class="text">
+<h3>ラル</h3>
+<p>フルーフ第七冠</p>
+</div>
+
+</a>
+
+<a href="rt.html"
+class="card"
+data-name="リツィ"
+data-tag="フルーフ 女">
+
+<img src="rt1.png" class="icon">
+
+<div class="text">
+<h3>リツィ</h3>
+<p>フルーフ第八冠</p>
+</div>
+
+</a>
+
+<a href="pts.html"
+class="card"
+data-name="パトシー"
+data-tag="フルーフ 女">
+
+<img src="pts1.png" class="icon">
+
+<div class="text">
+<h3>パトシー</h3>
+<p>フルーフ第九冠</p>
+</div>
+
+</a>
+
+<a href="m.html"
+class="card"
+data-name="メァーナス"
+data-tag="統治者 男">
+
+<img src="m1.png" class="icon">
+
+<div class="text">
+<h3>メァーナス</h3>
+<p>レーヴン統治者</p>
+</div>
+
+</a>
+
+<a href="g.html"
+class="card"
+data-name="ゴルド"
+data-tag="ディーラー 男">
+
+<img src="g1.png" class="icon">
+
+<div class="text">
+<h3>ゴルド</h3>
+<p>カジノディーラー</p>
+</div>
+
+</a>
+
+<a href="r.html"
+class="card"
+data-name="リュミエル"
+data-tag="スター 男">
+
+<img src="r1.jpeg" class="icon">
+
+<div class="text">
+<h3>リュミエル</h3>
+<p>国一の大スター</p>
+</div>
+
+</a>
+
+<a href="t.html"
+class="card"
+data-name="ツェル"
+data-tag="芸術家 男">
+
+<img src="t1.png" class="icon">
+
+<div class="text">
+<h3>ツェル</h3>
+<p>著名彫刻家</p>
+</div>
+
+</a>
 
 </div>
 
-<h2 class="section-title">その他</h2>
+<!-- =========================================
+その他
+========================================= -->
+
+<h2 class="section-title">
+その他
+</h2>
 
 <div class="card-list">
 
-  <a href="dairi.html" class="card">
-    <img src="dairi1.png" class="icon">
-    <div class="text">
-      <h3>代理</h3>
-      <p>アカウント代理</p>
-    </div>
-  </a>
+<a href="dairi.html"
+class="card"
+data-name="代理"
+data-tag="その他">
 
-  <a href="hanaka.html" class="card">
-    <img src="hanaka1.png" class="icon">
-    <div class="text">
-      <h3>雅楽代花奏</h3>
-      <p>盲目のピアニスト</p>
-    </div>
-  </a>
+<img src="dairi1.png" class="icon">
+
+<div class="text">
+<h3>代理</h3>
+<p>アカウント代理</p>
+</div>
+
+</a>
+
+<a href="hanaka.html"
+class="card"
+data-name="雅楽代 花奏 うたしろ はなか"
+data-tag="ピアニスト 女">
+
+<img src="hanaka1.png" class="icon">
+
+<div class="text">
+<h3>雅楽代花奏</h3>
+<p>盲目のピアニスト</p>
+</div>
+
+</a>
 
 </div>
 
@@ -467,21 +684,30 @@ searchInput.addEventListener("keydown", function(event) {
   const cards =
   document.querySelectorAll(".card");
 
-  let found = false;
+  const titles =
+  document.querySelectorAll(".section-title");
 
-  /* 一旦全部戻す */
+  /* 全リセット */
 
   cards.forEach(card => {
+
     card.style.display = "flex";
     card.classList.remove("highlight");
+
   });
 
-  /* 名前検索 */
+  titles.forEach(title => {
+    title.classList.remove("highlight");
+  });
+
+  /* ===================================
+     名前検索
+  =================================== */
 
   for (const card of cards) {
 
     const names =
-    card.dataset.name.toLowerCase();
+    (card.dataset.name || "").toLowerCase();
 
     if (names.includes(keyword)) {
 
@@ -496,19 +722,22 @@ searchInput.addEventListener("keydown", function(event) {
         card.classList.remove("highlight");
       }, 2000);
 
-      found = true;
       return;
+
     }
+
   }
 
-  /* タグ検索 */
+  /* ===================================
+     タグ検索
+  =================================== */
 
   let tagHit = false;
 
   cards.forEach(card => {
 
     const tags =
-    card.dataset.tag.toLowerCase();
+    (card.dataset.tag || "").toLowerCase();
 
     if (tags.includes(keyword)) {
 
@@ -523,12 +752,29 @@ searchInput.addEventListener("keydown", function(event) {
 
   });
 
-  if (tagHit) return;
+  if (tagHit) {
 
-  /* タイトル検索 */
+    const firstVisible =
+    [...cards].find(card =>
+      card.style.display !== "none"
+    );
 
-  const titles =
-  document.querySelectorAll(".section-title");
+    if (firstVisible) {
+
+      firstVisible.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
+
+    }
+
+    return;
+
+  }
+
+  /* ===================================
+     タイトル検索
+  =================================== */
 
   for (const title of titles) {
 
@@ -542,9 +788,16 @@ searchInput.addEventListener("keydown", function(event) {
         block: "start"
       });
 
-      found = true;
+      title.classList.add("highlight");
+
+      setTimeout(() => {
+        title.classList.remove("highlight");
+      }, 2000);
+
       return;
+
     }
+
   }
 
   alert("見つかりませんでした");
@@ -552,3 +805,6 @@ searchInput.addEventListener("keydown", function(event) {
 });
 
 </script>
+
+</body>
+</html>
