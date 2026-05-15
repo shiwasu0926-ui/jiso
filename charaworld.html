@@ -14,6 +14,7 @@ body {
   margin: 0;
   font-family: sans-serif;
   background: #f0f0f0;
+  color: #222;
 }
 
 .container {
@@ -26,7 +27,7 @@ body {
 /* 検索欄 */
 
 .search-box {
-  margin: 20px 0 30px;
+  margin: 20px 0 15px;
 }
 
 #searchInput {
@@ -40,12 +41,47 @@ body {
   border: 1px solid #ccc;
   border-radius: 10px;
 
+  outline: none;
+}
+
+#searchInput:focus {
+  border-color: #87cefa;
+}
+
+/* ボタン */
+
+.button-area {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.search-btn,
+.reset-btn {
+
+  border: none;
+  border-radius: 10px;
+
+  padding: 10px 16px;
+  font-size: 14px;
+
+  cursor: pointer;
+}
+
+.search-btn {
+  background: #87cefa;
+  color: white;
+}
+
+.reset-btn {
+  background: #ddd;
 }
 
 /* タイトル */
 
 .section-title {
   margin-top: 40px;
+  margin-bottom: 20px;
 }
 
 /* カード一覧 */
@@ -115,16 +151,28 @@ body {
 
 }
 
-/* 検索ヒット */
+/* ハイライト */
 
 .highlight {
+
   outline: 3px solid #87cefa;
   border-radius: 12px;
+
+}
+
+/* 非表示 */
+
+.hidden {
+  display: none !important;
 }
 
 /* スマホ */
 
 @media (max-width: 480px) {
+
+  .card-list {
+    grid-template-columns: 1fr;
+  }
 
   .icon {
     width: 44px;
@@ -163,7 +211,19 @@ body {
 <input
 type="text"
 id="searchInput"
-placeholder="キャラ名・作品名・タグで検索">
+placeholder="キャラ名・作品名・キーワードで検索">
+
+</div>
+
+<div class="button-area">
+
+<button class="search-btn" onclick="searchCharacter()">
+検索
+</button>
+
+<button class="reset-btn" onclick="resetSearch()">
+元に戻す
+</button>
 
 </div>
 
@@ -182,7 +242,7 @@ placeholder="キャラ名・作品名・タグで検索">
 <a href="char1.html"
 class="card"
 data-name="ショー ラジェック"
-data-tag="マジシャン 男 兄">
+data-tag="マジシャン 男 兄 お兄ちゃん">
 
 <img src="char1.png" class="icon">
 
@@ -224,7 +284,7 @@ data-tag="マジシャン 男 弟">
 <a href="zyuwa.html"
 class="card"
 data-name="ジュワーラ ミデラ"
-data-tag="マジシャン 男">
+data-tag="マジシャン 男 長髪男子">
 
 <img src="zyuwa1.jpg" class="icon">
 
@@ -252,7 +312,7 @@ data-tag="女">
 <a href="selu.html"
 class="card"
 data-name="シェル ラジェック"
-data-tag="男 弟">
+data-tag="男 弟 長髪男子">
 
 <img src="selu1.jpg" class="icon">
 
@@ -266,7 +326,7 @@ data-tag="男 弟">
 <a href="diru.html"
 class="card"
 data-name="ヂル リース"
-data-tag="男 兄">
+data-tag="男 兄 お兄ちゃん">
 
 <img src="diru1.jpg" class="icon">
 
@@ -280,7 +340,7 @@ data-tag="男 兄">
 <a href="diraika.html"
 class="card"
 data-name="ヂェライカ リース"
-data-tag="女 姉">
+data-tag="女 姉 妹 お姉ちゃん">
 
 <img src="diraika1.jpg" class="icon">
 
@@ -362,7 +422,7 @@ data-tag="生徒会 女">
 <a href="yuri.html"
 class="card"
 data-name="三陰 由利 みかげ ゆり"
-data-tag="生徒会 男">
+data-tag="生徒会 男 弟 長髪男子">
 
 <img src="yuri1.jpeg" class="icon">
 
@@ -390,7 +450,7 @@ data-tag="生徒会 男">
 <a href="sinn.html"
 class="card"
 data-name="古江田 真 ふるえだ しん"
-data-tag="演劇 男 兄">
+data-tag="演劇 男 兄 お兄ちゃん 長髪男子">
 
 <img src="sinn1.jpeg" class="icon">
 
@@ -432,7 +492,7 @@ data-tag="演劇 女">
 <a href="hiaki.html"
 class="card"
 data-name="泉 ひあき いずみ ひあき"
-data-tag="男 兄">
+data-tag="男 兄 お兄ちゃん">
 
 <img src="hiaki1.jpeg" class="icon">
 
@@ -457,8 +517,8 @@ data-tag="男 兄">
 
 <a href="sitera.html"
 class="card"
-data-name="シテラ"
-data-tag="フルーフ 女">
+data-name="シテラ モテトゥト"
+data-tag="フルーフ 男 モルテット">
 
 <img src="sitera1.png" class="icon">
 
@@ -471,8 +531,8 @@ data-tag="フルーフ 女">
 
 <a href="zeru.html"
 class="card"
-data-name="ゼルディア"
-data-tag="フルーフ 男">
+data-name="ゼルディア ラ・コンソール"
+data-tag="フルーフ 男 兄 お兄ちゃん 長髪男子 イコリティニ アマデヤ">
 
 <img src="zeru.png" class="icon">
 
@@ -485,8 +545,8 @@ data-tag="フルーフ 男">
 
 <a href="rimo.html"
 class="card"
-data-name="リモーレ"
-data-tag="フルーフ 女">
+data-name="リモーレ ヴェンデ"
+data-tag="フルーフ 男 弟 イコリティニ">
 
 <img src="rimo1.png" class="icon">
 
@@ -499,8 +559,8 @@ data-tag="フルーフ 女">
 
 <a href="hrn.html"
 class="card"
-data-name="フラン"
-data-tag="フルーフ 男">
+data-name="フラン ジュジェ"
+data-tag="フルーフ 女 イコリティニ">
 
 <img src="hrn1.png" class="icon">
 
@@ -513,8 +573,8 @@ data-tag="フルーフ 男">
 
 <a href="s.html"
 class="card"
-data-name="シャディ"
-data-tag="フルーフ 男">
+data-name="シャディ レブラ"
+data-tag="フルーフ 男 レーヴン">
 
 <img src="s1.jpeg" class="icon">
 
@@ -527,8 +587,8 @@ data-tag="フルーフ 男">
 
 <a href="rr.html"
 class="card"
-data-name="ラル"
-data-tag="フルーフ 男">
+data-name="ラル カレード"
+data-tag="フルーフ 男 アマデヤ">
 
 <img src="rr1.png" class="icon">
 
@@ -541,8 +601,8 @@ data-tag="フルーフ 男">
 
 <a href="rt.html"
 class="card"
-data-name="リツィ"
-data-tag="フルーフ 女">
+data-name="リツィ ミエリータ"
+data-tag="フルーフ 女 ペトル">
 
 <img src="rt1.png" class="icon">
 
@@ -555,8 +615,8 @@ data-tag="フルーフ 女">
 
 <a href="pts.html"
 class="card"
-data-name="パトシー"
-data-tag="フルーフ 女">
+data-name="パトシー アンゲルス"
+data-tag="フルーフ 不明 フォルチュナス">
 
 <img src="pts1.png" class="icon">
 
@@ -569,8 +629,8 @@ data-tag="フルーフ 女">
 
 <a href="m.html"
 class="card"
-data-name="メァーナス"
-data-tag="統治者 男">
+data-name="メァーナス サムルサ"
+data-tag="統治者 女 レーヴン">
 
 <img src="m1.png" class="icon">
 
@@ -583,8 +643,8 @@ data-tag="統治者 男">
 
 <a href="g.html"
 class="card"
-data-name="ゴルド"
-data-tag="ディーラー 男">
+data-name="ゴルド クローバー"
+data-tag="レーヴン 男">
 
 <img src="g1.png" class="icon">
 
@@ -598,7 +658,7 @@ data-tag="ディーラー 男">
 <a href="r.html"
 class="card"
 data-name="リュミエル"
-data-tag="スター 男">
+data-tag="レーヴン 男 弟">
 
 <img src="r1.jpeg" class="icon">
 
@@ -612,7 +672,7 @@ data-tag="スター 男">
 <a href="t.html"
 class="card"
 data-name="ツェル"
-data-tag="芸術家 男">
+data-tag="レーヴン 男 兄 お兄ちゃん">
 
 <img src="t1.png" class="icon">
 
@@ -637,8 +697,8 @@ data-tag="芸術家 男">
 
 <a href="dairi.html"
 class="card"
-data-name="代理"
-data-tag="その他">
+data-name="代理 師"
+data-tag="不明">
 
 <img src="dairi1.png" class="icon">
 
@@ -652,7 +712,7 @@ data-tag="その他">
 <a href="hanaka.html"
 class="card"
 data-name="雅楽代 花奏 うたしろ はなか"
-data-tag="ピアニスト 女">
+data-tag="女">
 
 <img src="hanaka1.png" class="icon">
 
@@ -672,42 +732,54 @@ data-tag="ピアニスト 女">
 const searchInput =
 document.getElementById("searchInput");
 
-searchInput.addEventListener("keydown", function(event) {
+const cards =
+document.querySelectorAll(".card");
 
-  if (event.key !== "Enter") return;
+const titles =
+document.querySelectorAll(".section-title");
+
+/* 検索 */
+
+function searchCharacter() {
 
   const keyword =
   searchInput.value.trim().toLowerCase();
 
   if (!keyword) return;
 
-  const cards =
-  document.querySelectorAll(".card");
+  resetVisual();
 
-  const titles =
-  document.querySelectorAll(".section-title");
+  /* =========================
+     作品タイトル検索
+  ========================= */
 
-  /* 全リセット */
+  for (const title of titles) {
 
-  cards.forEach(card => {
+    const titleText =
+    title.innerText.toLowerCase();
 
-    card.style.display = "flex";
-    card.classList.remove("highlight");
+    if (titleText.includes(keyword)) {
 
-  });
+      title.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
 
-  titles.forEach(title => {
-    title.classList.remove("highlight");
-  });
+      title.classList.add("highlight");
 
-  /* ===================================
+      return;
+    }
+  }
+
+  /* =========================
      名前検索
-  =================================== */
+  ========================= */
 
   for (const card of cards) {
 
     const names =
-    (card.dataset.name || "").toLowerCase();
+    (card.dataset.name || "")
+    .toLowerCase();
 
     if (names.includes(keyword)) {
 
@@ -718,50 +790,43 @@ searchInput.addEventListener("keydown", function(event) {
 
       card.classList.add("highlight");
 
-      setTimeout(() => {
-        card.classList.remove("highlight");
-      }, 2000);
-
       return;
-
     }
-
   }
 
-  /* ===================================
+  /* =========================
      タグ検索
-  =================================== */
+  ========================= */
 
-  let tagHit = false;
+  let hit = false;
 
   cards.forEach(card => {
 
     const tags =
-    (card.dataset.tag || "").toLowerCase();
+    (card.dataset.tag || "")
+    .toLowerCase();
 
     if (tags.includes(keyword)) {
 
       card.classList.add("highlight");
-      tagHit = true;
+      hit = true;
 
     } else {
 
-      card.style.display = "none";
+      card.classList.add("hidden");
 
     }
 
   });
 
-  if (tagHit) {
+  if (hit) {
 
-    const firstVisible =
-    [...cards].find(card =>
-      card.style.display !== "none"
-    );
+    const first =
+    document.querySelector(".card:not(.hidden)");
 
-    if (firstVisible) {
+    if (first) {
 
-      firstVisible.scrollIntoView({
+      first.scrollIntoView({
         behavior: "smooth",
         block: "start"
       });
@@ -769,40 +834,57 @@ searchInput.addEventListener("keydown", function(event) {
     }
 
     return;
-
-  }
-
-  /* ===================================
-     タイトル検索
-  =================================== */
-
-  for (const title of titles) {
-
-    const text =
-    title.innerText.toLowerCase();
-
-    if (text.includes(keyword)) {
-
-      title.scrollIntoView({
-        behavior: "smooth",
-        block: "start"
-      });
-
-      title.classList.add("highlight");
-
-      setTimeout(() => {
-        title.classList.remove("highlight");
-      }, 2000);
-
-      return;
-
-    }
-
   }
 
   alert("見つかりませんでした");
 
+}
+
+/* Enterでも検索 */
+
+searchInput.addEventListener("keydown", function(event) {
+
+  if (event.key === "Enter") {
+    searchCharacter();
+  }
+
 });
+
+/* 見た目リセット */
+
+function resetVisual() {
+
+  cards.forEach(card => {
+
+    card.classList.remove(
+      "highlight",
+      "hidden"
+    );
+
+  });
+
+  titles.forEach(title => {
+
+    title.classList.remove("highlight");
+
+  });
+
+}
+
+/* 元に戻す */
+
+function resetSearch() {
+
+  searchInput.value = "";
+
+  resetVisual();
+
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+
+}
 
 </script>
 
